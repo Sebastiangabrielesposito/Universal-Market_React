@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Universal-Market_React/static/css/main.5dc5f22e.css",
+    "main.js": "/Universal-Market_React/static/js/main.c88269fc.js",
+    "index.html": "/Universal-Market_React/index.html",
+    "main.5dc5f22e.css.map": "/Universal-Market_React/static/css/main.5dc5f22e.css.map",
+    "main.c88269fc.js.map": "/Universal-Market_React/static/js/main.c88269fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5dc5f22e.css",
+    "static/js/main.c88269fc.js"
+  ]
+}
