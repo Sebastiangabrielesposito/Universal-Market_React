@@ -1,0 +1,13 @@
+.carro{
+    margin-bottom: 2px;
+}
+.carro:hover{
+    color:lightblue;
+    transition: all 0.5s ease-out;
+    
+}
+@media (max-width: 600px) {
+    .carro{
+        opacity: 1;
+    }
+}

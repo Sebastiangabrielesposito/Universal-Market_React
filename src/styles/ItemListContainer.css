@@ -1,0 +1,17 @@
+.DFlex{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    color: #394870;
+    /* color: #f17a7a; */
+    margin-top: 100px;
+    cursor: pointer;
+}.title:hover{
+    color: #f17a7a;
+    /* color: lightblue; */
+    transition: all 0.6s ease-out;
+};
+

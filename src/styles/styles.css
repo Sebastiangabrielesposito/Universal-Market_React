@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace&display=swap');/*'Trispace', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');/*'Space Grotesk', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap'); /*'Space Mono', monospace;*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* background-image: url("../assets/img/universal.jpg"); */
+    /* background: #021b2c; */
+    font-family: 'Trispace', sans-serif;
+}
+.colorNav{
+    background-color: aqua;
+}
