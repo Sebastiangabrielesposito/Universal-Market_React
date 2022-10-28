@@ -9,9 +9,11 @@
     /* color: #f17a7a; */
     margin-top: 100px;
     cursor: pointer;
+    /* font-family: 'Inspiration', cursive; */
+    /* font-family: 'Alegreya SC', serif; */
 }.title:hover{
-    color: #f17a7a;
-    /* color: lightblue; */
+    /* color: #f17a7a; */
+    color: #8cbcd8;
     transition: all 0.6s ease-out;
 };
 

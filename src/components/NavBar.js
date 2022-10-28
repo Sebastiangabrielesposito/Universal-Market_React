@@ -22,13 +22,17 @@ import HomeIcon from '@mui/icons-material/Home';
 import { ListItemIcon } from "@mui/material";
 import ContactsIcon from '@mui/icons-material/Contacts';
 import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import {Menu,MenuItem} from '@mui/material'
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import {useState} from "react";
+import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 
 interface Props {
   window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "Productos", "Contacto"];
+// const navItems = ["Home", "Contacto"];
 
 export default function NavBar(props: Props) {
   const { window } = props;
@@ -37,6 +41,24 @@ export default function NavBar(props: Props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+
+  
+  const [anchorElm,setAnchorElm] = useState(null);
+  const [open,setOpen] =useState (false)
+  
+  const handleClose = () => {
+    setAnchorElm(null)
+    setOpen(false);
+  }
+
+  const handleClick = (e) => {
+    setAnchorElm(e.currentTarget)
+    setOpen(true)
+  }
+
+
+
 
   const drawer = (
     <Box
@@ -102,7 +124,7 @@ export default function NavBar(props: Props) {
             edge="start"
             onClick={handleDrawerToggle}
             sx={{
-              display: { sm: "none" },
+              display: { sm: "none"},
               color: "#fff",
               justifyContent: "left",
               flexGrow: 1,
@@ -118,20 +140,38 @@ export default function NavBar(props: Props) {
             sx={{
               flexGrow: 1,
               display: { xs: "none", sm: "block" },
+              // color: "grey",
+              // "&:hover": { color: "lightblue" },
+              // textAlign: "left",
+              // cursor: "pointer",
+              // transition: "all 0.5s ease-out",
+             }}
+          >
+            {/* UNIVERSAL-MARKET   */}
+            <Button variant="overline"
+             // component="div"
+            sx={{
               color: "grey",
               "&:hover": { color: "lightblue" },
               textAlign: "left",
               cursor: "pointer",
               transition: "all 0.5s ease-out",
-            }}
-          >
-            UNIVERSAL-MARKET
+              fontSize:14.5,
+              // fontFamily:'Alegreya SC, serif'
+              fontFamily:'cursive',
+              fontWeight:900
+              // fontFamily:'Inspiration, cursive'
+
+            }}>
+              UNIVERSAL-MARKET  
+            </Button> 
           </Typography>
 
          
-
+          {/* <HomeTwoToneIcon sx={{cursor:'pointer', '&:hover':{color:'lightblue'}}} />     */}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
+            
+            {/* {navItems.map((item) => (
               <Button
                 key={item}
                 sx={{
@@ -143,8 +183,72 @@ export default function NavBar(props: Props) {
               >
                 {item}
               </Button>
-            ))}
-          </Box>
+            ))} */}
+
+              
+              
+              <Button startIcon={ <HomeTwoToneIcon fontSize="large"  sx={{color:'text.primary',"&:hover": { color: "lightblue" }}}/>} sx={{
+                color: "grey",
+                gap: 0,
+                "&:hover": { color: "lightblue" },
+                fontFamily:' cursive',
+                fontSize:16,
+                // fontWeight:700
+                }}>
+                Home
+              </Button>   
+
+
+              <Button id="ButtonProducts" onClick={handleClick} endIcon={<ArrowDropDownIcon />} sx={{
+              color: "grey",
+              // background: "pink",
+                gap: 0,
+                fontFamily:' cursive',
+                fontSize:16,
+                // fontWeight:700,
+              "&:hover": { color: "lightblue" },
+            }}>
+                Productos
+              </Button> 
+              
+              
+            <Menu anchorElm={anchorElm} open={open} onClose={handleClose}         elevation={0}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                sx={{marginTop:4.2,marginLeft:129}}>
+                
+                <MenuItem onClick={handleClose} sx={{color:'#8cbcd8',cursor:'pointer',fontFamily:' cursive'}}>Proteinas</MenuItem>
+                
+                <Divider sx={{ my: 0.5,color:'grey' }} />
+                
+                <MenuItem onClick={handleClose} sx={{color:'#8cbcd8',fontFamily:' cursive'}}>Creatinas</MenuItem>
+                
+                <Divider sx={{ my: 0.5, color:'grey' }} />
+                
+                <MenuItem onClick={handleClose} sx={{color:'#8cbcd8',fontFamily:' cursive'}}>Ganadores de peso</MenuItem>
+               
+              </Menu>      
+
+
+              
+              <Button sx={{
+                color: "grey",
+                gap: 0,
+                fontFamily:'cursive',
+                fontSize:16,
+                // fontWeight:700,
+                "&:hover": { color: "lightblue" },
+                }}>
+                Contacto
+              </Button>    
+          
+            </Box>
           <CarWidgets />
         
         </Toolbar>
