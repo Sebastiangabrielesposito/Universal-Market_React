@@ -29,7 +29,7 @@ import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
-
+// import logo from '../assets/img/um.png'
 
 interface Props {
   window?: () => Window;
@@ -104,11 +104,6 @@ export default function NavBar(props: Props) {
     },
   }));
 
-
-
-
-
-
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
@@ -162,9 +157,6 @@ export default function NavBar(props: Props) {
 
    
   
-  
-
-
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
@@ -204,7 +196,7 @@ export default function NavBar(props: Props) {
             {/* UNIVERSAL-MARKET   */}
             <Button
               variant="overline"
-              // component="div"
+              component="div"
               sx={{
                 color: "grey",
                 "&:hover": { color: "lightblue" },
@@ -222,8 +214,20 @@ export default function NavBar(props: Props) {
               }}
             >
               UNIVERSAL-MARKET
+             
+              {/* <Box 
+              component="img"
+              sx={{
+              height: 33,
+              width: 60,
+              maxHeight: { xs: 233, md: 167 },
+              maxWidth: { xs: 350, md: 250 },
+              }}
+              src={logo}alt=""
+              /> */}
             </Button>
           </Typography>
+          
 
           <Search sx={{marginRight:{sm:0,md:12}}}>
             <SearchIconWrapper >
@@ -270,7 +274,7 @@ export default function NavBar(props: Props) {
                 fontFamily: " cursive",
                 // fontSize: 16,
                 // fontWeight:700
-                fontSize:{sm:9, md: 16 ,lg:16}
+                fontSize:{sm:11, md: 16 ,lg:16}
                
               }}
             >
@@ -289,7 +293,7 @@ export default function NavBar(props: Props) {
                 // fontSize: 16,
                 // fontWeight:700,
                 "&:hover": { color: "lightblue" },
-                fontSize:{sm:9, md: 16 ,lg:16}
+                fontSize:{sm:11, md: 16 ,lg:16}
               }}
             >
               Productos
@@ -308,7 +312,7 @@ export default function NavBar(props: Props) {
                 vertical: "top",
                 horizontal: "right",
               }}
-              sx={{ marginTop: 4.2, marginLeft: 129 }}
+              sx={{ marginTop: 4.2, marginLeft: 84}}
             >
               <MenuItem
                 onClick={handleClose}
@@ -348,7 +352,7 @@ export default function NavBar(props: Props) {
                 // fontSize: 16,
                 // fontWeight:700,
                 "&:hover": { color: "lightblue" },
-                fontSize:{sm:9, md: 16 ,lg:16},
+                fontSize:{sm:11, md: 16 ,lg:16},
                 
               }}
             >

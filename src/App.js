@@ -5,7 +5,8 @@ import "./styles/styles.css";
 import {  Globalstyle } from './app/styles';
 import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
-import  ItemCount from "./components/ItemCount"
+// import  ItemCount from "./components/ItemCount"
+import AutoPlay from "./components/Carrousel";
 
 
 
@@ -14,8 +15,9 @@ const App = () => {
     <div>
       <Globalstyle />
       <NavBar />
+      <AutoPlay />
       <ItemListContainer Greeting="🛒Universal-Market🛒" />
-      <ItemCount />
+      {/* <ItemCount /> */}
       
       
 

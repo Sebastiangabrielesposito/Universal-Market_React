@@ -1,0 +1,75 @@
+[
+    {
+        "id":"1",
+        "marca":"Star-Nutritíon",
+        "precio": 4680,
+        "categoria": "proteina",
+        "stock":"12",
+        "foto":"/imagenes/Protein-Star.webp",
+        "descripcion":"Proteina 907g "
+    },
+    {
+        "id":"2",
+        "marca":"Ena",
+        "precio": 5624,
+        "categoria": "proteina",
+        "stock":"20",
+        "foto":"../../public/imagenes/GanadorMassTech.webp",
+        "descripcion":"Proteina 907g "
+    },
+    {
+        "id":"3",
+        "marca":"Star-Nutritíon",
+        "precio": 4900,
+        "categoria": "ganador de masa",
+        "stock":"30",
+        "foto":"../../public/imagenes/Ganador-MutanMass.webp",
+        "descripcion":"Ganador de masa 907g "
+    },
+    {
+        "id":"4",
+        "marca":"Ultimate Nutrition",
+        "precio": 15950,
+        "categoria": "creatina",
+        "stock":"10",
+        "foto":"../../public/imagenes/CreatinaUltimate.webp",
+        "descripcion":"Creatina 300g "
+    },
+    {
+        "id":"1",
+        "marca":"Star-Nutritíon",
+        "precio": 4680,
+        "categoria": "proteina",
+        "stock":"10",
+        "foto":"/public/imagenes//AminoBsn.webp",
+        "descripcion":"Proteina 907g"
+    },
+    {
+        "id":"2",
+        "marca":"Ena",
+        "precio": 5624,
+        "categoria": "proteina",
+        "stock":"10",
+        "foto":"../../public/imagenes/Protein-Star.webp",
+        "descripcion":"Proteina 907g"
+    },
+    {
+        "id":"3",
+        "marca":"Star-Nutritíon",
+        "precio": 4900,
+        "categoria": "ganador de masa",
+        "stock":"10",
+        "foto":"../../public/imagenes/CreatinaUltimate.webp",
+        "descripcion":"Ganador de masa"
+    },
+    {
+        "id":"4",
+        "marca":"Ultimate Nutrition",
+        "precio": 15950,
+        "categoria": "creatina",
+        "stock":"10",
+        "foto":"../../public/imagenes/AminoBsn.webp",
+        "descripcion":"Creatina 300g"
+    }
+    
+]

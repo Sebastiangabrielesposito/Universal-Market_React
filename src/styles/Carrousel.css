@@ -1,0 +1,42 @@
+.slick-prev {
+    left: 3% !important;
+    z-index: 1;
+    
+  }
+  .slick-next {
+    right: 3% !important;
+    z-index: 1;
+  }
+  
+  .Arrow{
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .Arrow svg {
+    transition: all 0.5s ease-in-out;
+  }
+  .Arrow svg:hover {
+    color:lightblue;
+  }
+  .next{
+    right: 3%;
+    top: 50%;
+  }.next:hover{
+    color:lightblue;
+    transition: all 0.5s ease-in-out;
+  }
+  .prev{
+    left: 3%;
+    top: 50%;
+  }
+  .slick-slide > div {
+    margin: 0 30px;
+  }
+  .slick-list {
+    margin: 0 -30px;
+  }
+  .SliderContainer{
+      margin-top: 68px;
+  }

@@ -1,16 +1,35 @@
-
+// import { Button, Typography } from "@mui/material";
 import "../styles/ItemListContainer.css"
+// import AddIcon from '@mui/icons-material/Add';
+// import RemoveIcon from '@mui/icons-material/Remove';
+// import { height } from "@mui/system";
+// import products from '../assets/data.json'
+import {getProducts} from '../Services/products';
+import {useEffect, useState} from 'react';
+import {ItemList} from './Itemlist';
+// import ItemCount from "./ItemCount";
+
 
  const ItemListContainer = ({Greeting}) => {
+    
+    const [datos,setDatos] = useState([]);
+      useEffect(() => {
+        getProducts().then(data => {
+            console.log(data);
+            setDatos(data);
+        },)
+    });
+    
     return (
-
+        <div>
             <div className="title">
                 {Greeting}
             </div>   
-            /* <div className="market" style={{textAlign:'center',fontSize:30,color:'lightblue',cursor:'pointer',transition: 'all 0.6s ease-out',marginTop:100 }}>
-                {Greeting1}
-            </div>    */
-        
+            <div style={{textAlign:'center', marginTop:100}}>
+                <ItemList products={datos} />
+                {/* <ItemCount /> */}
+            </div>     
+        </div>
 
     )
 };
