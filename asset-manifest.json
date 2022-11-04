@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Universal-Market_React/static/css/main.ac52e5e6.css",
-    "main.js": "/Universal-Market_React/static/js/main.67ce743b.js",
+    "main.css": "/Universal-Market_React/static/css/main.75b0c269.css",
+    "main.js": "/Universal-Market_React/static/js/main.da74948b.js",
     "static/media/GanadorMassTech.webp": "/Universal-Market_React/static/media/GanadorMassTech.bfaa8d049ebf28d50e28.webp",
     "static/media/CreatinaUltimate.webp": "/Universal-Market_React/static/media/CreatinaUltimate.d2f49b9b80b240038967.webp",
     "static/media/AminoBsn.webp": "/Universal-Market_React/static/media/AminoBsn.0d135200af54c9e3da2d.webp",
@@ -13,11 +13,11 @@
     "static/media/slick.ttf": "/Universal-Market_React/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Universal-Market_React/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Universal-Market_React/index.html",
-    "main.ac52e5e6.css.map": "/Universal-Market_React/static/css/main.ac52e5e6.css.map",
-    "main.67ce743b.js.map": "/Universal-Market_React/static/js/main.67ce743b.js.map"
+    "main.75b0c269.css.map": "/Universal-Market_React/static/css/main.75b0c269.css.map",
+    "main.da74948b.js.map": "/Universal-Market_React/static/js/main.da74948b.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac52e5e6.css",
-    "static/js/main.67ce743b.js"
+    "static/css/main.75b0c269.css",
+    "static/js/main.da74948b.js"
   ]
 }
