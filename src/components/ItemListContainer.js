@@ -24,7 +24,9 @@ import {ItemList} from './Itemlist';
         <div>
             <div className="title">
                 {Greeting}
-                <p style={{fontSize:15}}>Suplementos deportivos</p>
+                <div className="subtitle">
+                    <p style={{fontSize:17,marginTop:5}}>Suplementos deportivos</p>
+                </div>
             </div>   
             <div style={{textAlign:'center', marginTop:0}}>
                 <ItemList products={datos} />
