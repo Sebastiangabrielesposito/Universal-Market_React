@@ -10,11 +10,14 @@ export const Item = ({item}) => {
     return(
         <div  className='FlexItem'>
             {item.map((it, i) => (
-                <div>
-                    <img src="/imagenes/Protein-Star.webp" alt="" />
-                    <p key={"2"} className='item'>{it.descripcion}</p>
+                <div className='FlexItem1'>
+                    <img src={it.foto} className='ItemImg' alt="" />
                     <p key={"3"} className='item'>{it.marca}</p>
+                    <p key={"2"} className='item'>{it.descripcion}</p>
                     <p key={"4"} className='item-Precio'>${it.precio}</p>
+                    <p key={"5"} className='item-Precio'>⭐⭐⭐⭐⭐</p>
+
+
                     <ItemCount />
                    <p  className='ItemCount'>Stock : {it.stock} </p>
                 </div>

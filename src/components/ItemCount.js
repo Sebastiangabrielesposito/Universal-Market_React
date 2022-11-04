@@ -12,7 +12,7 @@ import data from '../assets/data.json'
 const ItemCount = () => {
 
     
-    console.log(data[0].marca);
+    // console.log(data[0].marca);
 
     const MiStock = 10;
     const [counter,setCounter] = useState(0);

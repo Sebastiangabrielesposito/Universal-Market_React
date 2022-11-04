@@ -16,7 +16,7 @@ const App = () => {
       <Globalstyle />
       <NavBar />
       <AutoPlay />
-      <ItemListContainer Greeting="🛒Universal-Market🛒" />
+      <ItemListContainer Greeting="🛒Universal-Market🛒"/>
       {/* <ItemCount /> */}
       
       
