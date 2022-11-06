@@ -8,9 +8,9 @@ const Router = () => (
     <BrowserRouter>
         <Routes>
             <Route element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="/productos" element={<ItemListContainer />} />
-                 <Route path="contacto" element={<Contacto />} />
+                <Route path="/Universal-Market_React"  element={<Home />} />
+                <Route path="/Universal-Market_React/productos" element={<ItemListContainer />} />
+                 <Route path="/Universal-Market_React/contacto" element={<Contacto />} />
             </Route>
         </Routes>
     </BrowserRouter>

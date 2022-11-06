@@ -121,7 +121,7 @@ export default function NavBar(props: Props) {
         
       }}
     >
-      <Typography variant="h6" component={Link} to="/" className="titleNavBar" sx={{ my: 2 }}>
+      <Typography variant="h6" component={Link} to="/Universal-Market_React" className="titleNavBar" sx={{ my: 2 }}>
         Universal-Market
       </Typography>
       
@@ -129,7 +129,7 @@ export default function NavBar(props: Props) {
 
       <List component="nav">
         
-        <ListItem button component={Link} to="/" sx={{ marginLeft: 0}}>
+        <ListItem button component={Link} to="/Universal-Market_React" sx={{ marginLeft: 0}}>
           <ListItemIcon>
             <HomeIcon  sx={{ color: "white" }} />
           </ListItemIcon>
@@ -138,7 +138,7 @@ export default function NavBar(props: Props) {
         </ListItem>
         
         
-        <ListItem button component={Link} to="/productos" sx={{ marginLeft: 0 }}>
+        <ListItem button component={Link} to="/Universal-Market_React/productos" sx={{ marginLeft: 0 }}>
           <ListItemIcon>
             <ProductionQuantityLimitsIcon sx={{ color: "white" }} />
           </ListItemIcon>
@@ -146,7 +146,7 @@ export default function NavBar(props: Props) {
           {/* <ListItemText  primary="Productos" /> */}
         </ListItem>
 
-        <ListItem button component={Link} to="/contacto" sx={{ marginLeft: 0 }}>
+        <ListItem button component={Link} to="/Universal-Market_React/contacto" sx={{ marginLeft: 0 }}>
           <ListItemIcon>
             <ContactsIcon sx={{ color: "white" }} />
           </ListItemIcon>
@@ -226,7 +226,7 @@ export default function NavBar(props: Props) {
               
               }}
             >
-              <Link className="titleNav" to="/">UNIVERSAL-MARKET</Link>
+              <Link className="titleNav" to="/Universal-Market_React">UNIVERSAL-MARKET</Link>
              
               {/* <Box 
               component="img"
@@ -288,7 +288,7 @@ export default function NavBar(props: Props) {
                 fontSize:{sm:11, md: 16 ,lg:16}
               }} 
             >
-            <Link className="HomeBar" to="/" 
+            <Link className="HomeBar" to="/Universal-Market_React" 
             >Home</Link>
             </Button>
 
@@ -306,7 +306,7 @@ export default function NavBar(props: Props) {
                 "&:hover": { color: "lightblue" },
                 fontSize:{sm:11, md: 16 ,lg:16}
               }}
-            ><Link className="ProductosBar" to="/productos">Productos
+            ><Link className="ProductosBar" to="/Universal-Market_React/productos">Productos
             </Link>
             </Button>
 
@@ -368,7 +368,7 @@ export default function NavBar(props: Props) {
                 
               }}
             >
-            <Link className="ContactoBar" to="/contacto" >Contacto</Link>
+            <Link className="ContactoBar" to="/Universal-Market_React/contacto" >Contacto</Link>
             </Button>
           </Box>
           <CarWidgets />
