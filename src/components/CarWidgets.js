@@ -9,7 +9,7 @@ const CarWidgets = () => {
             <Button >
                 <IconButton  sx={{color:'#fff'}}>
                 {/* //   href="https://google.com"> */}
-                    <ShoppingCartTwoToneIcon  className='carro'/>
+                    <ShoppingCartTwoToneIcon  className='carro Car'/>
                 </IconButton>
             </Button>
         </div>

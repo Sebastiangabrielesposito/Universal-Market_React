@@ -1,4 +1,7 @@
-[
+
+
+const dataHome = [
+
     {
         "id":"1",
         "marca":"Star-Nutritíon",
@@ -76,5 +79,6 @@
         "foto": "https://http2.mlstatic.com/D_NQ_NP_807699-MLA32462816330_102019-O.webp",
         "descripcion":"Creatina 300g "
     }
-    
-]
+        
+];
+export default dataHome;

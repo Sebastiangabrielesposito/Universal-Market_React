@@ -11,3 +11,14 @@
         opacity: 1;
     }
 }
+.Car{
+    animation-name: animatedCar;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+@keyframes animatedCar{
+    0%{color: white;}
+    50%{color: rgb(1, 14, 19);}
+    100%{color: white;}
+}

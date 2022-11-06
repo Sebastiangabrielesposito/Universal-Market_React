@@ -6,28 +6,22 @@ import "../styles/ItemListContainer.css"
 // import products from '../assets/data.json'
 import {getProducts} from '../Services/products';
 import {useEffect, useState} from 'react';
-import {ItemList} from './Itemlist';
+import {ItemList} from '../components/Itemlist';
 // import ItemCount from "./ItemCount";
 
 
- const ItemListContainer = ({Greeting}) => {
+ const ItemListContainer = () => {
     
     const [datos,setDatos] = useState([]);
       useEffect(() => {
         getProducts().then(data => {
-            console.log(data);
+            // console.log(data);
             setDatos(data);
         },)
     });
     
     return (
-        <div>
-            <div className="title">
-                {Greeting}
-                <div className="subtitle">
-                    <p style={{fontSize:17,marginTop:5}}>Suplementos deportivos</p>
-                </div>
-            </div>   
+        <div>  
             <div style={{textAlign:'center', marginTop:0}}>
                 <ItemList products={datos} />
                 {/* <ItemCount /> */}

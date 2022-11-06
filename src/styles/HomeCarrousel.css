@@ -1,0 +1,26 @@
+.slick-prev {
+    left: 3% !important;
+    z-index: 1;
+    margin:auto;
+    
+    
+  }
+  .slick-next {
+    right: 3% !important;
+    z-index: 1;
+    margin:auto
+  }
+  .HomeCarrousel{
+    background-color: rgb(22, 49, 77);
+    height: 200px;
+    width: auto;
+  }
+  .img1{
+      height: 200px;
+      align-items: center;
+      text-align: center;
+  }
+  .imgCarrousel{
+      width: 100%;
+      
+  }

@@ -1,0 +1,62 @@
+.titleNav{
+    animation-name: animatedivNav;
+    animation-iteration-count: infinite ;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    text-decoration: none;
+    color: grey;
+    font-family: cursive;
+}
+.titleNavBar{
+    animation-name: animatedivNavBar;
+    animation-iteration-count: infinite ;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    text-decoration: none;
+    color: grey;
+    font-family: cursive;
+    padding: 10px;
+    font-size: 23px;
+}
+@keyframes animatedivNavBar{
+    0%{color: white;}
+    50%{color: lightblue;}
+    100%{color: white;}
+} 
+@keyframes animatedivNav{
+    0%{color: white;}
+    50%{color: lightblue;}
+    100%{color: grey;}
+}
+.HomeBar{
+    text-decoration: none;
+    color:grey;
+    gap:0;
+    font-family: cursive;
+}.HomeBar:hover{
+    color:lightblue
+}
+.ProductosBar{
+    text-decoration: none;
+    color:grey;
+    gap:0;
+    font-family: cursive;
+}.ProductosBar:hover{
+    color:lightblue
+}
+.ContactoBar{
+    text-decoration: none;
+    color:grey;
+    gap:0;
+    font-family: cursive;
+}.ContactoBar:hover{
+    color:lightblue
+}
+.HomeBar1{
+    text-decoration: none;
+    color:lightblue;
+    gap:0;
+    font-family: cursive;
+    font-size: 25px;
+    
+}

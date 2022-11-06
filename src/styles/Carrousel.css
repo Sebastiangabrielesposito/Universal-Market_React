@@ -33,10 +33,12 @@
   }
   .slick-slide > div {
     margin: 0 30px;
+    
   }
   .slick-list {
     margin: 0 -30px;
   }
   .SliderContainer{
       margin-top: 68px;
+      width: 100%;
   }

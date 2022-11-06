@@ -12,10 +12,14 @@ export const Item = ({item}) => {
             {item.map((it, i) => (
                 <div className='FlexItem1'>
                     <img src={it.foto} className='ItemImg' alt="" />
-                    <p key={"3"} className='item'>{it.marca}</p>
-                    <p key={"2"} className='item'>{it.descripcion}</p>
-                    <p key={"4"} className='item-Precio'>${it.precio}</p>
-                    <p key={"5"} className='item-Precio'>⭐⭐⭐⭐⭐</p>
+                    <p key={"2"} className='item'>{it.marca}</p>
+                    <p key={"3"} className='item'>{it.descripcion}</p>
+                    <div className='precios'>
+
+                    <p key={"4"} className='item-PrecioConDescuento'> {it.$}{it.preciocondescuento}</p>
+                    <p key={"5"} className='item-Precio'>${it.precio}</p>
+                    </div>
+                    <p key={"6"} className='item-Precio'>⭐⭐⭐⭐⭐</p>
 
 
                     <ItemCount />

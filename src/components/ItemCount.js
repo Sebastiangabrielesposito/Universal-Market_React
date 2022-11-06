@@ -4,7 +4,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 // import {ButtonCounts} from './ButtonCounts';
 import {useState} from 'react';
 import '../styles/ItemCounts.css'
-import data from '../assets/data.json'
+// import data from '../assets/data.json'
 // import {getProducts} from '../Services/products';
 // import { Item } from './Item';
 // import data from '../assets/data'

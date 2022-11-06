@@ -1,5 +1,5 @@
 import products from '../assets/data.json'
-// import producto from '../assets/data'
+import dataHome from '../assets/data-Home';
 
 // export const getProducts = () => {
 //     const task = new Promise((resolve, reject ) =>{
@@ -11,12 +11,20 @@ import products from '../assets/data.json'
 // return task
 // }
 
+
 export const getProducts = () => {
     const task = new Promise((resolve, reject ) =>{
         setTimeout(() =>{
             resolve(products);
 
-        },2000)
+        },100)
 });
 return task
 }
+
+export const HomeProducts = () => {
+    const task1 = new Promise((resolve, reject) =>{
+        resolve(dataHome)
+    });
+    return task1
+};

@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 // import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+// import ListItemText from "@mui/material/ListItemText";
 // import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -30,6 +30,10 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 // import logo from '../assets/img/um.png'
+import '../styles/NavBar.css'
+import {Link} from 'react-router-dom'
+
+
 
 interface Props {
   window?: () => Window;
@@ -57,6 +61,7 @@ export default function NavBar(props: Props) {
   const handleClick = (e) => {
     setAnchorElm(e.currentTarget);
     setOpen(true);
+
   };
 
   
@@ -112,33 +117,41 @@ export default function NavBar(props: Props) {
         color: "lightblue",
         backgroundColor: "rgba(0, 0, 0, 0.5)",
         height: 1200,
+        padding:1
+        
       }}
     >
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h6" component={Link} to="/" className="titleNavBar" sx={{ my: 2 }}>
         Universal-Market
       </Typography>
-      <Divider sx={{ background: "#373737" }} />
+      
+      <Divider className="titleNav" sx={{ background: "#5e6580", marginTop:4 }} />
 
       <List component="nav">
-        <ListItem button sx={{ marginLeft: 2 }}>
+        
+        <ListItem button component={Link} to="/" sx={{ marginLeft: 0}}>
           <ListItemIcon>
-            <HomeIcon sx={{ color: "white" }} />
+            <HomeIcon  sx={{ color: "white" }} />
           </ListItemIcon>
-          <ListItemText primary="Home" sx={{ marginLeft: 1.5 }} />
+          <Typography sx={{ marginLeft: 2.5 ,fontSize:22, fontFamily:'cursive',textAlign:'center' }}>Home</Typography>
+      {/* <ListItemText primary="Home"   sx={{ marginLeft: 1.5}} /> */}
         </ListItem>
-
-        <ListItem button sx={{ marginLeft: 2 }}>
+        
+        
+        <ListItem button component={Link} to="/productos" sx={{ marginLeft: 0 }}>
           <ListItemIcon>
             <ProductionQuantityLimitsIcon sx={{ color: "white" }} />
           </ListItemIcon>
-          <ListItemText primary="Productos" />
+          <Typography sx={{ marginRight: 0 ,fontSize:22, fontFamily:'cursive',textAlign:'center' }}>Productos</Typography>
+          {/* <ListItemText  primary="Productos" /> */}
         </ListItem>
 
-        <ListItem button sx={{ marginLeft: 2 }}>
+        <ListItem button component={Link} to="/contacto" sx={{ marginLeft: 0 }}>
           <ListItemIcon>
             <ContactsIcon sx={{ color: "white" }} />
           </ListItemIcon>
-          <ListItemText primary="Contacto" sx={{ marginLeft: 0.2 }} />
+          <Typography sx={{ marginLeft: 0.5 ,fontSize:22, fontFamily:'cursive',textAlign:'center' }}>Contacto</Typography>
+          {/* <ListItemText primary="Contacto" sx={{ marginLeft: 0.2 }} /> */}
         </ListItem>
 
         {/* {navItems.map((item) => (
@@ -149,8 +162,8 @@ export default function NavBar(props: Props) {
             </ListItemButton>
           </ListItem>
         ))} */}
-        <Divider sx={{ background: "#373737" }} />
-        <ShoppingCartTwoToneIcon sx={{ color: "#fff", marginTop: 3 }} />
+        <Divider sx={{ background: "#5e6580", marginTop:2 }} />
+        <ShoppingCartTwoToneIcon className="Car" sx={{ color: "#fff", marginTop: 4, fontSize:35, marginLeft: 0.9}} />
       </List>
     </Box>
   );
@@ -162,7 +175,7 @@ export default function NavBar(props: Props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar component="nav" sx={{ background: "rgba(0, 0, 0, 0.3)" }}>
+      <AppBar component="nav" sx={{ background: "rgba(0, 0, 0, 0.9)" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -194,17 +207,17 @@ export default function NavBar(props: Props) {
             }}
           >
             {/* UNIVERSAL-MARKET   */}
-            <Button
+            
+            <Button   
+              className="titleNav"
               variant="overline"
               component="div"
               sx={{
-                color: "grey",
                 "&:hover": { color: "lightblue" },
                 textAlign: "left",
                 cursor: "pointer",
-                transition: "all 0.5s ease-out",
-                // fontSize: 14.5,
-                // fontFamily:'Alegreya SC, serif'
+                transition: "all .5s ease-out",
+          
                 fontFamily: "cursive",
                 fontWeight: 900,
                 // fontFamily:'Inspiration, cursive'
@@ -213,7 +226,7 @@ export default function NavBar(props: Props) {
               
               }}
             >
-              UNIVERSAL-MARKET
+              <Link className="titleNav" to="/">UNIVERSAL-MARKET</Link>
              
               {/* <Box 
               component="img"
@@ -231,9 +244,9 @@ export default function NavBar(props: Props) {
 
           <Search sx={{marginRight:{sm:0,md:12}}}>
             <SearchIconWrapper >
-              <SearchIcon />
+              <SearchIcon style={{color:'white'}} />
             </SearchIconWrapper>
-            <StyledInputBase sx={{color:'#636363'}}
+            <StyledInputBase sx={{color:'white'}}
               placeholder="Buscar productos…"
               inputProps={{ "aria-label": "search" }}
             />
@@ -256,13 +269,13 @@ export default function NavBar(props: Props) {
                 {item}
               </Button>
             ))} */}
-
+  
             <Button
               startIcon={
-                <HomeTwoToneIcon
+                <HomeTwoToneIcon 
                   fontSize="large"
                   sx={{
-                    color: "text.primary",
+                    color: "grey",
                     "&:hover": { color: "lightblue" },
                   }}
                 />
@@ -272,13 +285,11 @@ export default function NavBar(props: Props) {
                 gap: 0,
                 "&:hover": { color: "lightblue" },
                 fontFamily: " cursive",
-                // fontSize: 16,
-                // fontWeight:700
                 fontSize:{sm:11, md: 16 ,lg:16}
-               
-              }}
+              }} 
             >
-              Home
+            <Link className="HomeBar" to="/" 
+            >Home</Link>
             </Button>
 
             <Button
@@ -295,10 +306,11 @@ export default function NavBar(props: Props) {
                 "&:hover": { color: "lightblue" },
                 fontSize:{sm:11, md: 16 ,lg:16}
               }}
-            >
-              Productos
+            ><Link className="ProductosBar" to="/productos">Productos
+            </Link>
             </Button>
 
+               
             <Menu
               anchorElm={anchorElm}
               open={open}
@@ -356,7 +368,7 @@ export default function NavBar(props: Props) {
                 
               }}
             >
-              Contacto
+            <Link className="ContactoBar" to="/contacto" >Contacto</Link>
             </Button>
           </Box>
           <CarWidgets />
