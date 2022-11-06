@@ -8,6 +8,7 @@ const Title = ({Greeting}) => {
             <div className="title">
             <FitnessCenterIcon style={{fontSize:31}}/>{Greeting}<SportsGymnasticsIcon style={{fontSize:35}}/>
                 <p style={{fontSize:20,marginTop:6}}>Suplementos deportivos </p>
+            
             </div>
         </div>
         
