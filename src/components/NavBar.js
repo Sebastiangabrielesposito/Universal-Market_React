@@ -32,7 +32,8 @@ import { styled, alpha } from '@mui/material/styles';
 // import logo from '../assets/img/um.png'
 import '../styles/NavBar.css'
 import {Link} from 'react-router-dom'
-
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import SportsGymnasticsIcon from '@mui/icons-material/SportsGymnastics';
 
 
 interface Props {
@@ -122,7 +123,8 @@ export default function NavBar(props: Props) {
       }}
     >
       <Typography variant="h6" component={Link} to="/Universal-Market_React" className="titleNavBar" sx={{ my: 2 }}>
-        Universal-Market
+      <FitnessCenterIcon style={{fontSize:18}}/>Universal-Marke<SportsGymnasticsIcon style={{marginTop:10}}/>
+      
       </Typography>
       
       <Divider className="titleNav" sx={{ background: "#5e6580", marginTop:4 }} />
@@ -226,7 +228,8 @@ export default function NavBar(props: Props) {
               
               }}
             >
-              <Link className="titleNav" to="/Universal-Market_React">UNIVERSAL-MARKET</Link>
+              <Link className="titleNav" to="/Universal-Market_React">
+              <FitnessCenterIcon style={{fontSize:12}}/>UNIVERSAL-MARKE<SportsGymnasticsIcon style={{fontSize:17}}/></Link>
              
               {/* <Box 
               component="img"
@@ -311,7 +314,7 @@ export default function NavBar(props: Props) {
             </Button>
 
                
-            <Menu
+            <Menu 
               anchorElm={anchorElm}
               open={open}
               onClose={handleClose}
@@ -324,7 +327,7 @@ export default function NavBar(props: Props) {
                 vertical: "top",
                 horizontal: "right",
               }}
-              sx={{ marginTop: 4.2, marginLeft: 84}}
+              sx={{ marginTop: 6.2, marginLeft: 84}}
             >
               <MenuItem
                 onClick={handleClose}
@@ -334,7 +337,9 @@ export default function NavBar(props: Props) {
                   fontFamily: " cursive",
                 }}
               >
-                Proteinas
+                <Link className="MenuProductos" to="/Universal-Market_React/productos/proteinas">
+                  Proteinas
+                </Link>
               </MenuItem>
 
               <Divider sx={{ my: 0.5, color: "grey" }} />
@@ -343,7 +348,9 @@ export default function NavBar(props: Props) {
                 onClick={handleClose}
                 sx={{ color: "#8cbcd8", fontFamily: " cursive" }}
               >
-                Creatinas
+                <Link className="MenuProductos" to="/Universal-Market_React/productos/creatinas">
+                  Creatinas
+                </Link>
               </MenuItem>
 
               <Divider sx={{ my: 0.5, color: "grey" }} />
@@ -352,7 +359,9 @@ export default function NavBar(props: Props) {
                 onClick={handleClose}
                 sx={{ color: "#8cbcd8", fontFamily: " cursive" }}
               >
-                Ganadores de peso
+                <Link className="MenuProductos" to="/Universal-Market_React/productos/ganadoresdepeso">
+                  Ganadores de peso
+                </Link>
               </MenuItem>
             </Menu>
 

@@ -51,14 +51,14 @@ const dataHome = [
     },
     {
         "id":"6",
-        "marca":"Bsn",
-        "precio": 13564,
+        "marca":"Ultimate-Nutrition",
+        "precio": 58199,
         "$":"$",
-        "preciocondescuento": 14999,
-        "categoria": "Aminoácidos",
+        "preciocondescuento": 59399 ,
+        "categoria": "proteina",
         "stock":"12",
-        "foto":"https://http2.mlstatic.com/D_NQ_NP_842832-MLA47844817087_102021-O.webp",
-        "descripcion":"Aminoácidos 435g"
+        "foto":"https://http2.mlstatic.com/D_NQ_NP_2X_846955-MLA49081515514_022022-F.webp",
+        "descripcion":"Proteina 1.3kg"
     },
     {
         "id":"7",
