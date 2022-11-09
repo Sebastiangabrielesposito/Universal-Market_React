@@ -4,9 +4,10 @@ import { Item } from './Item';
 
 
 export const ItemList = ({products}) => {
+// console.log(products);
     return(
-        <div >
-            <Item item={products} />
+        <div className='FlexItemList' >
+           {products.map( product => <Item item={product} />)} 
         </div>
     )
 }

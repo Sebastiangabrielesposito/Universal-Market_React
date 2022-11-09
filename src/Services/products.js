@@ -1,18 +1,22 @@
 import products from '../assets/data.json'
-import dataHome from '../assets/data-Home';
-
-// export const getProducts = () => {
-//     const task = new Promise((resolve, reject ) =>{
-//         setTimeout(() =>{
-//             resolve(producto);
-
-//         },2000)
-// });
-// return task
-// }
+// import dataHome from '../assets/data-Home';
 
 
-export const getProducts = () => {
+export const getProducts = (idCategoria) => {
+    const task = new Promise((resolve, reject ) =>{
+        setTimeout(() =>{
+            resolve(idCategoria ? 
+                products.filter(prod  => prod.categoria === idCategoria)
+                : products);
+
+        },100)
+        
+});
+return task
+}
+// console.log(products.categoria);
+
+export const getProducto = (id) => {
     const task = new Promise((resolve, reject ) =>{
         setTimeout(() =>{
             resolve(products);
@@ -22,9 +26,12 @@ export const getProducts = () => {
 return task
 }
 
-export const HomeProducts = () => {
-    const task1 = new Promise((resolve, reject) =>{
-        resolve(dataHome)
+
+
+export const HomeProducts = (PrecioCondescuento) => {
+    const task1 = new Promise((resolve, reject) => {
+        
+        resolve(products.filter(prod => prod.preciocondescuento === PrecioCondescuento))
     });
     return task1
 };

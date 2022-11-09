@@ -6,6 +6,7 @@ import AutoPlay from "../components/Carrousel"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Title from "../components/Title"
+import Footer from  '../components/Footer'
 const Layout = () => {
     return (
         <div>
@@ -13,7 +14,8 @@ const Layout = () => {
             <NavBar />
             <AutoPlay />
             <Title Greeting="Universal-Marke" />
-            <Outlet />   
+            <Outlet />
+            <Footer />   
         </div>
 
     );

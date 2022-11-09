@@ -1,12 +1,24 @@
+.FlexItemList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+}
 .FlexItem{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; 
     gap: 35px;
     flex-wrap: wrap;
     padding: 15px;
     background-color: rgb(0, 0, 0);
     /* margin-top: 0px;   */
+}@media (min-width: 1200px)  {
+    .FlexItemList{
+        gap:40px
+    }
 }
 .FlexItem1{
     /* border: 0.5px inset  #fff; */
@@ -56,6 +68,7 @@
     color:#888;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 12px;
     cursor: pointer;   
 }
 .precios{
@@ -67,6 +80,21 @@
     font-size: 20px;
     color: #580808;
     margin-top: 12px;
-    text-decoration:line-through;
-    
+    text-decoration:line-through;   
+}
+.LinkDetalle{
+    text-align: center;
+    align-content: center;
+    padding: 3px;
+    border-radius: 50px;
+    /* border: 1.5px solid #1463ad; */
+    text-decoration: none;
+    color: rgb(71, 167, 199);
+    font-size: 14px;
+    transition: all 0.6s ease-in-out;
+
+
+}.LinkDetalle:hover{
+    color: #63c1ec;
+    transition: all 0.6s ease-in-out;
 }

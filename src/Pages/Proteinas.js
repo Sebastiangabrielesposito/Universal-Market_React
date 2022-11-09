@@ -1,30 +1,31 @@
-import {DataProteina} from '../assets/data';
-import ItemCount from '../components/ItemCount';
+// import {getProducts} from '../Services/products';
+// import {useEffect, useState} from 'react';
+// import {useParams} from 'react-router-dom';
 
 
 
 export const Proteinas = () => {
-    // console.log(DataProteina);
+    // const {idCategoria} = useParams();
+    // const [datos,setDatos] = useState([]);
+      
+    // useEffect(() => {
+    //     getProducts(idCategoria).then(data => {
+    //         // console.log('data',data)
+    //         setDatos(data);
+    //     })
+    // },[]);
+    
+    // const FiltroProteinas = () => {
+    // console.log('datos', datos)
+    //     const FiltroProteina = datos.filter(da => da.categoria === "proteinas")
+
+    // console.log('filtroproteina:',FiltroProteina);
+    //     setDatos(FiltroProteina)
+    // };
+    // products.filter(prod  => prod.categoria === "proteinas")
     return(
         <div className='FlexItem'>
-                {
-                DataProteina.map((protein, i) => (
-                    <div className='FlexItem1'>
-                        <img src={protein.foto} className='ItemImg' alt="" />
-                        <p key={"2"} className='item'>{protein.marca}</p>
-                        <p key={"3"} className='item'>{protein.descripcion}</p>
-                        <div className='precios'>
-                        <p key={"4"} className='item-PrecioConDescuento'> {protein.$}{protein.preciocondescuento}</p>
-                        <p key={"5"} className='item-Precio'>${protein.precio}</p>
-                        </div>
-                        <p key={"6"} className='item-Precio'>⭐⭐⭐⭐⭐</p>
-
-
-                        <ItemCount />
-                        <p  className='ItemCount'>Stock : {protein.stock} </p>
-                    </div>
-                    ))
-                }
+              {/* {FiltroProteinas} */}
         </div>
     );
 };

@@ -5,24 +5,33 @@ import "slick-carousel/slick/slick-theme.css";
 import {ItemListHome} from '../components/ItemListHome'
 import { useEffect, useState } from "react";
 import {HomeProducts} from '../Services/products';
+import { useParams } from "react-router-dom";
+import ItemDetail from '../components/ItemDetail';
+import products from '../assets/data.json';
 
 
 const Home = () => {
-
-    const [homedata, setHomedata] = useState([]);
+    const {PrecioCondescuento} = useParams
+    console.log("preciocondescuento", PrecioCondescuento);
+    const [products, setProducts] = useState([]);
         useEffect(() => {
-            HomeProducts().then(date => {
-                // console.log(date);
-                setHomedata(date) 
-            },[])
-        })
-
-    
-    
+            HomeProducts(PrecioCondescuento).then(date => {
+                setProducts(date) 
+            })
+        }, [])
+    //     let FiltroDestacados = () => {
+    //         const FiltroDestacados = products.filter(prod => prod.preciocondescuento === preciocondescuento)
+    //         setProducts(FiltroDestacados)
+    //    } 
+        
     return (
         <div>
             <DestacadosHome />
-            <ItemListHome productos={homedata} />
+            <ItemListHome productos= {products} />
+            
+            {/* { preciocondescuento && <ItemListHome productos={preciocondescuento} />}  */}
+            {/* {preciocondescuento && <ItemListHome productos={FiltroDestacados}/>} */}
+            {/* <p>{FiltroDestacados}</p> */}
         </div>
     );
 };

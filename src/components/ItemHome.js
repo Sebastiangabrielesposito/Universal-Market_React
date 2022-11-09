@@ -1,31 +1,24 @@
-import ItemCount from "./ItemCount"
+// import ItemCount from './ItemCount';
+import {Link} from 'react-router-dom';
 import '../styles/ItemHome.css'
 
-export const ItemHome = ({itemHomedata}) => {
+export const ItemHome = ({itemProducts}) => {
+    // console.log(itemProducts);
     return(
-        <div>
-            {/* <p className="OfertasInbatibles">Ofertas inbatibles</p>  */}
-            <div className="FlexItemHome">
-                {itemHomedata.map((it, i) => (   
-                    <div className="FlexItem1">
-                        <img src={it.foto} className='ItemImage' alt="" />
-                        <p key={"2"} className='items'>{it.marca}</p>
-                        <p key={"3"} className='items'>{it.descripcion}</p>
-                        <div className='precios'>
-                            <p key={"4"} className='item-PrecioConDescuento'> {it.$}{it.preciocondescuento}</p>
-                            <p key={"5"} className='item-Precio'>${it.precio}</p>
-                        </div>
-                        <p key={"6"} className='item-Precio'>⭐⭐⭐⭐⭐</p>
-
-
-                        <ItemCount />
-                    <p  className='ItemCount'>Stock : {it.stock} </p>
-                    </div>
-                    )
-                )}
-                
+        <div  className='FlexItem'>
+            <div className='FlexItem1'>
+                <img src={itemProducts.foto} alt="Foto del producto"  className='ItemImg' />
+                <p  className='item'>{itemProducts.descripcion}</p>
+                <p  className='item'>{itemProducts.marca}</p>
+                <div className='precios'>
+                    <p key={"4"} className='item-PrecioConDescuento'> {itemProducts.$}{itemProducts.preciocondescuento}</p>
+                    <p  className='item-Precio'>${itemProducts.precio}</p>
+                </div>
+                    {/* <ItemCount /> */}
+                    {/* <p  className='ItemCount'>Stock : {itemProducts.stock} </p> */}
+                    <Link to={"/Universal-Market_React/productos/" + itemProducts.preciocondescuento} className='LinkDetalle'>Detalle del producto</Link>  
             </div>
-        </div>            
+        </div>
     )
 
 }
