@@ -11,14 +11,21 @@ import products from '../assets/data.json';
 
 
 const Home = () => {
-    const {PrecioCondescuento} = useParams
-    console.log("preciocondescuento", PrecioCondescuento);
+    
+    const {id} = useParams()
+    
+    console.log("preciocondescuento", id);
+    
     const [products, setProducts] = useState([]);
-        useEffect(() => {
-            HomeProducts(PrecioCondescuento).then(date => {
-                setProducts(date) 
-            })
-        }, [])
+        
+    useEffect(() => {
+        HomeProducts(id).then(date => {
+            console.log(products);
+            setProducts(date) 
+        })
+    }, [id])
+    
+    
     //     let FiltroDestacados = () => {
     //         const FiltroDestacados = products.filter(prod => prod.preciocondescuento === preciocondescuento)
     //         setProducts(FiltroDestacados)
@@ -28,10 +35,6 @@ const Home = () => {
         <div>
             <DestacadosHome />
             <ItemListHome productos= {products} />
-            
-            {/* { preciocondescuento && <ItemListHome productos={preciocondescuento} />}  */}
-            {/* {preciocondescuento && <ItemListHome productos={FiltroDestacados}/>} */}
-            {/* <p>{FiltroDestacados}</p> */}
         </div>
     );
 };

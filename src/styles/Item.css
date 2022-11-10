@@ -33,10 +33,11 @@
 }
 .item{
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
     color: #394870;
     /* color: #f17a7a; */
-    margin-top: 7px;
+    margin-top: 18px;
+    margin-bottom: 3px;
     cursor: pointer;
     transition: all 0.6s ease-in-out;
 }.item:hover{
@@ -49,6 +50,8 @@
     font-size: 20px;
     color: #394870;
     margin-top: 12px;
+    margin-bottom: 10px;
+
     /* cursor: pointer; */
 }
 /* .item-Precio:hover{
@@ -80,7 +83,8 @@
     font-size: 20px;
     color: #580808;
     margin-top: 12px;
-    text-decoration:line-through;   
+    text-decoration:line-through;
+       
 }
 .LinkDetalle{
     text-align: center;
@@ -88,13 +92,13 @@
     padding: 3px;
     border-radius: 50px;
     /* border: 1.5px solid #1463ad; */
-    text-decoration: none;
+    /* text-decoration: none; */
     color: rgb(71, 167, 199);
     font-size: 14px;
     transition: all 0.6s ease-in-out;
 
 
 }.LinkDetalle:hover{
-    color: #63c1ec;
+    color: #0d5dc7;
     transition: all 0.6s ease-in-out;
 }

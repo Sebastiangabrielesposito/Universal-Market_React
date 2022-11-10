@@ -14,8 +14,6 @@ export const Item = ({item}) => {
                     <p key={"4"} className='item-PrecioConDescuento'> {item.$}{item.preciocondescuento}</p>
                     <p  className='item-Precio'>${item.precio}</p>
                 </div>
-                    {/* <ItemCount /> */}
-                    {/* <p  className='ItemCount'>Stock : {item.stock} </p> */}
                     <Link to={"/Universal-Market_React/productos/item/" + item.id} className='LinkDetalle'>Detalle del producto</Link>  
             </div>
         </div>

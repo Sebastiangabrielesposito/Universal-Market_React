@@ -8,7 +8,6 @@ export const getProducts = (idCategoria) => {
             resolve(idCategoria ? 
                 products.filter(prod  => prod.categoria === idCategoria)
                 : products);
-
         },100)
         
 });
@@ -20,7 +19,6 @@ export const getProducto = (id) => {
     const task = new Promise((resolve, reject ) =>{
         setTimeout(() =>{
             resolve(products);
-
         },100)
 });
 return task
@@ -28,10 +26,10 @@ return task
 
 
 
-export const HomeProducts = (PrecioCondescuento) => {
+export const HomeProducts = (id) => {
     const task1 = new Promise((resolve, reject) => {
         
-        resolve(products.filter(prod => prod.preciocondescuento === PrecioCondescuento))
+        resolve(products.filter(prod => prod.$ === "$"))
     });
     return task1
 };

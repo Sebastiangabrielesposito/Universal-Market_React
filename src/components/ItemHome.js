@@ -16,7 +16,7 @@ export const ItemHome = ({itemProducts}) => {
                 </div>
                     {/* <ItemCount /> */}
                     {/* <p  className='ItemCount'>Stock : {itemProducts.stock} </p> */}
-                    <Link to={"/Universal-Market_React/productos/" + itemProducts.preciocondescuento} className='LinkDetalle'>Detalle del producto</Link>  
+                    <Link to={"/Universal-Market_React/productos/item/" + itemProducts.id} className='LinkDetalle'>Detalle del producto</Link>  
             </div>
         </div>
     )

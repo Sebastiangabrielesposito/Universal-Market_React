@@ -18,13 +18,8 @@ const Router = () => (
                 <Route path="/Universal-Market_React/productos" element={<ItemListContainer />} />
                 <Route path="/Universal-Market_React/productos/:idCategoria" element={<ItemListContainer />} />
                 <Route path="/Universal-Market_React/productos/item/:id" element={<ItemDetailContainer />} />
-                <Route path="/Universal-Market_React/productos/:PrecioCondescuento" element={<ItemListContainer />} />
-
+                <Route path="/Universal-Market_React/productos/item/:id" element={<ItemDetailContainer />} />
                 
-
-                {/* <Route path="/Universal-Market_React/productos/proteinas" element={<Proteinas />} /> */}
-                {/* <Route path="/Universal-Market_React/productos/creatinas" element={<Creatinas />} /> */}
-                {/* <Route path="/Universal-Market_React/productos/ganadoresdepeso" element={<Ganadoresdepeso />} /> */}
                 
                 <Route path="/Universal-Market_React/contacto" element={<Contacto />} />
                 <Route path="/Universal-Market_React/car"  element={<Car />} />
