@@ -65,3 +65,57 @@
     text-decoration: none;
     font-size: 18px;
 }
+.MenuNavItem{
+    margin-left: 658px;
+    margin-top: 40.2px;
+}@media (min-width:600px){
+    .MenuNavItem{
+        margin-left: 305px;
+        margin-top: 50.2px;
+    }
+}@media (min-width:627px){
+    .MenuNavItem{
+        margin-left: 455px;
+        margin-top: 20.2px;
+    }
+}@media (min-width:775px){
+    .MenuNavItem{
+        margin-left: 525px;
+        margin-top: 35.2px;
+    }
+}@media (min-width:900px){
+    .MenuNavItem{
+        margin-left: 655px;
+        margin-top: 35.2px;
+    }
+}@media (min-width:1035px){
+    .MenuNavItem{
+        margin-left: 675px;
+        margin-top: 35.2px;
+    }
+}@media (min-width:1070px){
+    .MenuNavItem{
+        margin-left: 745px;
+        margin-top: 35.2px;
+    }
+}@media (min-width:1140px){
+    .MenuNavItem{
+        margin-left: 815px;
+        margin-top: 35.2px;
+    }
+}@media (min-width:1200px){
+    .MenuNavItem{
+        margin-left: 915px;
+        margin-top: 35.2px;
+    }
+}@media (min-width:1300px){
+    .MenuNavItem{
+        margin-left: 955px;
+        margin-top: 35.2px;
+    }
+}@media (min-width:1330px){
+    .MenuNavItem{
+        margin-left: 995px;
+        margin-top: 35.2px;
+    }
+}

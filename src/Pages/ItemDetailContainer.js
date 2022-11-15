@@ -5,8 +5,8 @@ import {getProducto} from '../Services/products'
 import {useParams} from 'react-router-dom';
 
 
-const ItemDetailContainer = () => {
 
+const ItemDetailContainer = () => {
     const {id} = useParams();
 
     const [producto, SetProducto] = useState([])
@@ -20,7 +20,6 @@ const ItemDetailContainer = () => {
     
     return (
         <div>
-            
             {BuscarProd && <ItemDetail DetailItem = {BuscarProd} />}
         </div>
     );

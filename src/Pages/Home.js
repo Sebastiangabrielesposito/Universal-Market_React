@@ -1,13 +1,12 @@
 import { DestacadosHome } from "../components/Destacados-Home";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-// import ItemListContainer from "./ItemListContainer";
 import {ItemListHome} from '../components/ItemListHome'
 import { useEffect, useState } from "react";
 import {HomeProducts} from '../Services/products';
 import { useParams } from "react-router-dom";
-import ItemDetail from '../components/ItemDetail';
-import products from '../assets/data.json';
+import {useMyContext} from '../app/Context/CarContext';
+
 
 
 const Home = () => {
@@ -17,24 +16,24 @@ const Home = () => {
     console.log("preciocondescuento", id);
     
     const [products, setProducts] = useState([]);
-        
-    useEffect(() => {
+    const [state,setState] = useMyContext();   
+    
+     useEffect(() => {
         HomeProducts(id).then(date => {
             console.log(products);
             setProducts(date) 
         })
     }, [id])
-    
-    
-    //     let FiltroDestacados = () => {
-    //         const FiltroDestacados = products.filter(prod => prod.preciocondescuento === preciocondescuento)
-    //         setProducts(FiltroDestacados)
-    //    } 
-        
+    const v = 500      
     return (
         <div>
             <DestacadosHome />
             <ItemListHome productos= {products} />
+           
+            {/* {setState(v)} */}
+            {/* <div><input type="text" onChange={(e) => setState({...state,nombre: e.target.value})} /></div>
+            <div><input type="text" onChange={(e) => setState({...state, edad: e.target.value})} /></div> */}
+
         </div>
     );
 };

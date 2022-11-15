@@ -1,78 +1,88 @@
-import {Button, Typography} from '@mui/material';
+import '../styles/ItemCounts.css'
+import Button from '@mui/material/Button';
+import {useState} from 'react';
+import {Typography} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-// import {ButtonCounts} from './ButtonCounts';
-import {useState} from 'react';
-import '../styles/ItemCounts.css'
-// import data from '../assets/data.json'
-// import {getProducts} from '../Services/products';
-// import { Item } from './Item';
-// import data from '../assets/data'
+import { Link } from 'react-router-dom';
 
-const ItemCount = () => {
 
+const ItemCount = ({Stock,onAdd}) => {
     
-    // console.log(data[0].marca);
-
-    const MiStock = 10;
     const [counter,setCounter] = useState(0);
-
+    
     const AddCounter = () =>{
         setCounter(counter + 1); 
-        counter >= MiStock &&  setCounter(counter === false )
     }
-
+    
     const RemoveCounter = () => {
-        setCounter(counter - 1)
-        counter <= 0 &&  setCounter(counter === false)
-        
+        setCounter(counter - 1) 
     }
-
-    return (
-            <div >
-                
-                <Typography align='center' sx={{marginTop:1}}  >
-                    <Button 
-                        variant="contained"
-                        // IconButton 
-                        startIcon={<RemoveIcon  onClick={() => {
+    
+    
+    return(
+        <div>
+            <div className='FlexInputCount'>
+                <Typography align='center' sx={{marginTop:1,display:'flex',gap:1.1,textAlign:'center'}}  >
+                    <Button  
+                        disabled={ counter <= 0 } 
+                        variant="contained" 
+                        startIcon={<RemoveIcon className='RemmoveIcon' onClick={() => {
                             RemoveCounter();
-                            // mistock()
-                          }}/>}
-                        endIcon= {<AddIcon  onClick={() => {
-                            AddCounter() ;
-                            // mistock()
-
-                          }} />}
+                            }}/>}
                         sx={{
-                            gap:5,
-                            width:180,
-                            height:23,
-                            color: "#c8cfdb",
-                            background:"rgba(0, 0, 0, 0.4)",
-                            "&:hover": { background: "rgba(99, 99, 104, 0.9)", color:"#aabbd8" },
-                            transition:"all 0.5s ease-in-out"
-                          }} >
-                            {counter}               
+                        marginTop:0.5,
+                        gap:5,
+                        width:10,
+                        height:20,
+                        color: "#c8cfdb",
+                        background:"rgba(0, 0, 0, 0.4)",
+                        "&:hover": { background: "rgba(99, 99, 104, 0.9)", color:"#aabbd8" },
+                        transition:"all 0.5s ease-in-out"
+                        }} >
+                                        
                     </Button>
-                </Typography>
-              
-        
-                <Typography align='center' sx={{marginTop:1}} >
-                    <Button 
-                        sx={{"&:hover": { color: "#8cbcd8" },height:25, fontSize:10.5, width:180, color:'grey', background:'#aabbd8', transition:"all 0.5s ease-in-out", fontFamily:'Trispace'}}
-                        variant="outlinedWarning">
-                        {/* 'Inspiration', cursive ,'Trispace'    */}
                         
+                        <p className='InputCounter'>{counter}</p>
+                    
+                    <Button disabled={counter >= Stock } 
+                    variant="contained" 
+                    endIcon= {<AddIcon className='AddIcon'  onClick={() => {
+                        AddCounter() ;
+                    }} />}
+                    sx={{
+                        marginTop:0.5,
+                        textAlign:'center',
+                        gap:5,
+                        width:10,
+                        height:20,
+                        color: "#c8cfdb",
+                        background:"rgba(0, 0, 0, 0.4)",
+                        "&:hover": { background: "rgba(99, 99, 104, 0.9)", color:"#aabbd8" },
+                        transition:"all 0.5s ease-in-out"
+                        }} >                       
+                    </Button>            
+                </Typography>
+            </div>
+            
+             {counter ?   <Link to="/Universal-Market_React/car"><Button onClick={() => onAdd(counter)} >Finalizar      Compra</Button></Link> :
+                
+                <div >
+                    <Typography align='center' sx={{marginTop:1}} >
+                        <Button  
+                        sx={{"&:hover": { color: "#8cbcd8" },height:25, fontSize:10.5, width:160, color:'grey', background:'#aabbd8', transition:"all 0.5s ease-in-out", fontFamily:'Trispace',marginBottom:0.2}}
+                        variant="outlinedWarning">                        
                         Agregar al carrito</Button>
                 </Typography>             
-                          
-                {/* <p className="ItemCount" >Stock :  {data[0].stock - counter}</p>   */}
+                
+                <p  className='ItemCount' > Stock :{Stock-counter}</p></div> 
                 
                 
-            </div>              
-        
+            }
+        </div>
         )
 };
 
 export default ItemCount;
+
+// counterInput= {products.map((prod,i) => prod.stock)}

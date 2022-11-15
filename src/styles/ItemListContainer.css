@@ -2,6 +2,14 @@
     display: flex;
     justify-content: center;
 }
+.divimgProducts{
+    text-align: center;
+    background-color: black;
+    width: 100%;
+}
+.imgProducts{
+    width: 750px;
+}
 .titlee{
     text-align: center;
     font-size: 30px;

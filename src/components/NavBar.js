@@ -255,7 +255,7 @@ export default function NavBar(props: Props) {
             />
           </Search>
 
-          {/* <HomeTwoToneIcon sx={{cursor:'pointer', '&:hover':{color:'lightblue'}}} />     */}
+          
           <Box sx={{ display: { xs: "none", sm: "block" },
           // marginLeft:{sm:-1} 
           }}>
@@ -327,7 +327,8 @@ export default function NavBar(props: Props) {
                 vertical: "top",
                 horizontal: "right",
               }}
-              sx={{ marginTop: 6.2, marginLeft: 84}}
+              className="MenuNavItem"
+              // sx={{ marginTop: 6.2, marginLeft: 84}}
             >
               <MenuItem
                 onClick={handleClose}

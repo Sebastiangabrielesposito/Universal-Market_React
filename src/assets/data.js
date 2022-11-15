@@ -34,7 +34,7 @@ export const DataProteina = [
             "marca":"Ena",
             "precio": 7490,
             "categoria": "proteina",
-            "stock":"10",
+            "stock":"15",
             "foto":"https://http2.mlstatic.com/D_NQ_NP_752159-MLA48893905925_012022-O.webp",
             "descripcion":"Proteina 907g "
         },
@@ -46,7 +46,7 @@ export const DataProteina = [
             "$":"$",
             "preciocondescuento": 23999,
             "categoria": "Proteina",
-            "stock":"10",
+            "stock":"8",
             "foto":"https://http2.mlstatic.com/D_NQ_NP_844237-MLA46759713430_072021-O.webp",
             "descripcion":"Proteina 912g"
         }
@@ -71,7 +71,7 @@ export const DataGanadordePeso = [
         "id":"6",
         "marca":"Star-Nutritíon",
         "precio": 4900,
-        "categoria": "ganador de masa",
+        "categoria": "ganador de peso",
         "stock":"20",
         "foto":"https://http2.mlstatic.com/D_NQ_NP_859537-MLA48818841632_012022-O.webp",
         "descripcion":"Ganador de masa 1.53kg "
@@ -82,7 +82,7 @@ export const DataGanadordePeso = [
         "precio": 7199,
         "$":"$",
         "preciocondescuento": 8599,
-        "categoria": "ganador de masa",
+        "categoria": "ganador de peso",
         "stock":"20",
         "foto":"https://http2.mlstatic.com/D_NQ_NP_2X_955083-MLA51073367104_082022-F.webp",
         "descripcion":"Ganador de masa 3kg "
@@ -91,7 +91,7 @@ export const DataGanadordePeso = [
         "id":"8",
         "marca":"Xtreght",
         "precio": 4041,
-        "categoria": "ganador de masa",
+        "categoria": "ganador de peso",
         "stock":"20",
         "foto":"https://http2.mlstatic.com/D_NQ_NP_2X_639303-MLA52146936564_102022-F.webp",
         "descripcion":"Ganador de masa 1.5kg "
@@ -115,7 +115,7 @@ export const DataCreatina = [
         "marca":"Ultimate Nutrition",
         "precio": 15950,
         "categoria": "creatina",
-        "stock":"10",
+        "stock":"15",
         "foto": "https://http2.mlstatic.com/D_NQ_NP_807699-MLA32462816330_102019-O.webp",
         "descripcion":"Creatina 300g "
     },
@@ -124,18 +124,18 @@ export const DataCreatina = [
         "marca":"Xtrenght",
         "precio": 8811,
         "categoria": "creatina",
-        "stock":"10",
+        "stock":"18",
         "foto": "https://http2.mlstatic.com/D_NQ_NP_754605-MLA31012119359_062019-O.webp",
         "descripcion":"Creatina 250g "
     },
     {
         "id":"12",
-        "marca":"Ultimate Nutrition",
-        "precio": 10999,
+        "marca":"Star Nutrition",
+        "precio": 1999,
         "$":"$",
         "preciocondescuento": 13499,
         "categoria": "creatina",
-        "stock":"10",
+        "stock":"12",
         "foto": "https://http2.mlstatic.com/D_NQ_NP_992202-MLA46595776122_072021-O.webp",
         "descripcion":"Creatina 300g "
     }

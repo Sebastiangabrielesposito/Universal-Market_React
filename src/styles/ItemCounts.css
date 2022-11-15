@@ -5,3 +5,23 @@
     cursor: pointer;
     
 }
+.FlexInputCount{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-bottom: 10px;   
+}
+.InputCounter{
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    color: #394870;
+    cursor: pointer;
+    font-size: 20px;
+}.InputCounter:hover{
+    color: lightblue;
+}
+.AddIcon{
+    margin-right: 12px;
+}
+.RemmoveIcon{
+    margin-left: 12px;
+}

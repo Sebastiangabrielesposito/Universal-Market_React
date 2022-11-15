@@ -4,17 +4,19 @@ import {getProducts} from '../Services/products';
 import {useEffect, useState} from 'react';
 import {ItemList} from '../components/Itemlist';
 import {useParams} from 'react-router-dom';
+import {useMyContext} from '../app/Context/CarContext';
 
 
 const ItemListContainer = () => {
     const {idCategoria} = useParams();
-    console.log('idCategoria: ',idCategoria);
+    // console.log('idCategoria: ',idCategoria);
+    const [state,setState] = useMyContext();
 
     const [datos,setDatos] = useState([]);
       
     useEffect(() => {
         getProducts(idCategoria).then(data => {
-            console.log('data',data)
+            // console.log('data',data)
             setDatos(data);
         })
     },[idCategoria]);
@@ -49,8 +51,16 @@ const ItemListContainer = () => {
 
                 <p onClick={FiltroTodas} style={{color:'white',background:'black', fontSize:18}}> Todos</p>   
             </div>      */}
+           {/* <div style={{color:'red',fontSize:30}}>{state.nombre}</div>
+           <div style={{color:'red',fontSize:30}}>{state.edad}</div> */}
+           {/* <div style={{color:'red',fontSize:30,background:'black'}}>{state}</div> */}
+           
+            
             <div>
-                <ItemList products={datos} />   
+                <ItemList products={datos} /> 
+                <div className="divimgProducts">
+                    <img className="imgProducts" src=" https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/7b4a1c116419619.60627a4c5dd9e.gif" alt="" />  
+                </div>
             </div>
         </div>
 

@@ -1,7 +1,7 @@
 [
     {
         "id":"1",
-        "marca":"StarNutritíon",
+        "marca":"Star-Nutritíon",
         "precio":4680,
         "categoria":"proteinas",
         "stock":"12",
@@ -24,7 +24,7 @@
         "marca":"Ena",
         "precio": 7490,
         "categoria": "proteinas",
-        "stock":"10",
+        "stock":"15",
         "foto":"https://http2.mlstatic.com/D_NQ_NP_752159-MLA48893905925_012022-O.webp",
         "descripcion":"Proteina 907g "
     },
@@ -35,7 +35,7 @@
         "$":"$",
         "preciocondescuento": 23999,
         "categoria": "proteinas",
-        "stock":"10",
+        "stock":"8",
         "foto":"https://http2.mlstatic.com/D_NQ_NP_844237-MLA46759713430_072021-O.webp",
         "descripcion":"Proteina 912g"
     },
@@ -92,10 +92,10 @@
     },
     {
         "id":"10",
-        "marca":"Ultimate Nutrition",
+        "marca":"Ultimate-Nutrition",
         "precio": 15950,
         "categoria": "creatinas",
-        "stock":"10",
+        "stock":"12",
         "foto": "https://http2.mlstatic.com/D_NQ_NP_807699-MLA32462816330_102019-O.webp",
         "descripcion":"Creatina 300g "
     },
@@ -104,18 +104,18 @@
         "marca":"Xtrenght",
         "precio": 8811,
         "categoria": "creatinas",
-        "stock":"10",
+        "stock":"15",
         "foto": "https://http2.mlstatic.com/D_NQ_NP_754605-MLA31012119359_062019-O.webp",
         "descripcion":"Creatina 250g "
     },
     {
         "id":"12",
-        "marca":"Ultimate Nutrition",
+        "marca":"Star-Nutrition",
         "precio": 10999,
         "$":"$",
         "preciocondescuento": 13499,
         "categoria": "creatinas",
-        "stock":"10",
+        "stock":"15",
         "foto": "https://http2.mlstatic.com/D_NQ_NP_992202-MLA46595776122_072021-O.webp",
         "descripcion":"Creatina 300g "
     }

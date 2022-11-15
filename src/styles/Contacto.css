@@ -3,3 +3,17 @@ hr{
     max-width: 970px;
     margin: auto; 
 }
+.ContactoEsperamos{
+    animation-name: animatedivNavBar;
+    animation-iteration-count: infinite ;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+}
+
+
+
+@keyframes animatedivNavBar{
+    0%{color: black;}
+    50%{color: rgb(131, 175, 204);}
+    100%{color:  black;}
+} 
