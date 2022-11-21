@@ -7,9 +7,14 @@
     background-color: black;
     width: 100%;
 }
+
 .imgProducts{
     width: 750px;
-}
+}@media (max-width: 730px){
+    .imgProducts{
+        width: 100%;  
+    }
+}   
 .titlee{
     text-align: center;
     font-size: 30px;

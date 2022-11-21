@@ -6,9 +6,8 @@ const Title = ({Greeting}) => {
         
         <div style={{height:270,background:'black'}}>
             <div className="title">
-            <FitnessCenterIcon style={{fontSize:31}}/>{Greeting}<SportsGymnasticsIcon style={{fontSize:35}}/>
-                <p style={{fontSize:20,marginTop:6}}>Suplementos deportivos </p>
-            
+                <FitnessCenterIcon  style={{fontSize:31}}/>{Greeting}<SportsGymnasticsIcon style={{fontSize:35}}/>
+                <p className='SubTitle1' >Suplementos deportivos </p>
             </div>
         </div>
         

@@ -8,7 +8,7 @@ export const getProducts = (idCategoria) => {
             resolve(idCategoria ? 
                 products.filter(prod  => prod.categoria === idCategoria)
                 : products);
-        },100)
+        },1000)
         
 });
 return task

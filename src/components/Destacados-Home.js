@@ -12,7 +12,7 @@ export const DestacadosHome = () => {
             </div>
             <div className='TitleFeatured'>
                 {/* <BiBomb  className='Bibomb' style={{color:'white'}}/> */}
-                <p className="TitlePremium">Destacados Premium</p>
+                <p  className="TitlePremium">Destacados Premium</p>
             </div>
         </div>
 

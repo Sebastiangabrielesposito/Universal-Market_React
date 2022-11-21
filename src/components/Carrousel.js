@@ -78,14 +78,14 @@ export default class AutoPlay extends Component {
                 {
                   breakpoint: 1024,
                   settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
                     infinite: true,
                     // dots: true
                   }
                 },
                 {
-                  breakpoint: 600,
+                  breakpoint: 750,
                   settings: {
                     slidesToShow: 3,
                     slidesToScroll: 2,
@@ -98,6 +98,15 @@ export default class AutoPlay extends Component {
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
+                    // dots: true
+                  }
+                },
+                {
+                  breakpoint: 360,
+                  settings: {
+                    centerMode: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     // dots: true
                   }
                 }
@@ -132,6 +141,8 @@ export default class AutoPlay extends Component {
             <div>
                 <img src={AminoBsn} alt="" style={{ height:170}} />
               {/* <h3>6</h3> */}
+              {/* 
+              {/* https://mir-s3-cdn-cf.behance.net/project_modules/fs/c5c613116419619.60633894b599b.png */}
             </div>
           </Slider>
         </div>

@@ -8,13 +8,9 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-// import ListItemButton from "@mui/material/ListItemButton";
-// import ListItemText from "@mui/material/ListItemText";
-// import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-// import LinearScaleIcon from '@mui/icons-material/LinearScale'
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import CarWidgets from "./CarWidgets";
 import ShoppingCartTwoToneIcon from "@mui/icons-material/ShoppingCartTwoTone";
@@ -34,6 +30,7 @@ import '../styles/NavBar.css'
 import {Link} from 'react-router-dom'
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import SportsGymnasticsIcon from '@mui/icons-material/SportsGymnastics';
+import {useMyContext} from '../app/Context/CarContext';
 
 
 interface Props {
@@ -43,7 +40,7 @@ interface Props {
 const drawerWidth = 240;
 // const navItems = ["Home", "Contacto"];
 
-export default function NavBar(props: Props) {
+export default function NavBar(props: Props ) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -65,6 +62,12 @@ export default function NavBar(props: Props) {
 
   };
 
+  // const [search,setSearch] = useMyContext("");
+  // const handleSearch = (event) => { // changed the "handleSearch()" function
+  //   props.click(value)
+  // }
+  
+  
   
   const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -76,7 +79,7 @@ export default function NavBar(props: Props) {
     marginLeft: 0,
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
+      marginLeft: theme.spacing(),
       width: 'auto',
     },
   }));
@@ -152,18 +155,8 @@ export default function NavBar(props: Props) {
           <ListItemIcon>
             <ContactsIcon sx={{ color: "white" }} />
           </ListItemIcon>
-          <Typography sx={{ marginLeft: 0.5 ,fontSize:22, fontFamily:'cursive',textAlign:'center' }}>Contacto</Typography>
-          {/* <ListItemText primary="Contacto" sx={{ marginLeft: 0.2 }} /> */}
+            <Typography sx={{ marginLeft: 0.5 ,fontSize:22, fontFamily:'cursive',textAlign:'center' }}>Contacto</Typography>
         </ListItem>
-
-        {/* {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center", color: "#b3d6e4" }}>
-            <ShoppingCartTwoToneIcon />
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))} */}
         <Divider sx={{ background: "#5e6580", marginTop:2 }} />
         <ShoppingCartTwoToneIcon className="Car" sx={{ color: "#fff", marginTop: 4, fontSize:35, marginLeft: 0.9}} />
       </List>
@@ -192,8 +185,6 @@ export default function NavBar(props: Props) {
             }}
           >
             <MenuOpenIcon />
-            {/* <LinearScaleIcon /> */}
-            {/* <MenuIcon /> */}
           </IconButton>
           <Typography
             variant="overline"
@@ -201,11 +192,6 @@ export default function NavBar(props: Props) {
             sx={{
               flexGrow: 1,
               display: { xs: "none", sm: "block" },
-              // color: "grey",
-              // "&:hover": { color: "lightblue" },
-              // textAlign: "left",
-              // cursor: "pointer",
-              // transition: "all 0.5s ease-out",
             }}
           >
             {/* UNIVERSAL-MARKET   */}
@@ -222,10 +208,7 @@ export default function NavBar(props: Props) {
           
                 fontFamily: "cursive",
                 fontWeight: 900,
-                // fontFamily:'Inspiration, cursive'
-                fontSize:{sm:11, md: 14.5 ,lg:14.5},
-                
-              
+                fontSize:{sm:11, md: 14.5 ,lg:14.5},          
               }}
             >
               <Link className="titleNav" to="/Universal-Market_React">
@@ -244,35 +227,29 @@ export default function NavBar(props: Props) {
             </Button>
           </Typography>
           
-
-          <Search sx={{marginRight:{sm:0,md:12}}}>
+          {/* <input type="text" placeholder="Buscar... " onChange={e => setSearch(e.target.value.toLowerCase())}/> */}
+          <div>
+          <Search sx={{marginRight:{sm:0,md:10}}}
+              
+              // value={""}
+          >
             <SearchIconWrapper >
               <SearchIcon style={{color:'white'}} />
             </SearchIconWrapper>
-            <StyledInputBase sx={{color:'white'}}
+            <StyledInputBase   sx={{color:'white'}}
+              // onChange={(event) => {
+              //   setSearch(event.target.value.toLowerCase())}}
+              // delete the value={search}
               placeholder="Buscar productos…"
-              inputProps={{ "aria-label": "search" }}
+              inputProps={{ "aria-label": "Buscar productos…" }}
+              // onClick={handleSearch}
             />
           </Search>
-
+          </div>      
           
           <Box sx={{ display: { xs: "none", sm: "block" },
           // marginLeft:{sm:-1} 
           }}>
-            {/* {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{
-                  color: "grey",
-                  cursor: "pointer",
-                  "&:hover": { color: "lightblue" },
-                  transition: "all 0.5s ease-out",
-                }}
-              >
-                {item}
-              </Button>
-            ))} */}
-  
             <Button
               startIcon={
                 <HomeTwoToneIcon 
@@ -301,19 +278,15 @@ export default function NavBar(props: Props) {
               endIcon={<ArrowDropDownIcon />}
               sx={{
                 color: "grey",
-                // background: "pink",
                 gap: 0,
                 fontFamily: " cursive",
-                // fontSize: 16,
-                // fontWeight:700,
                 "&:hover": { color: "lightblue" },
                 fontSize:{sm:11, md: 16 ,lg:16}
               }}
-            ><Link className="ProductosBar" to="/Universal-Market_React/productos">Productos
-            </Link>
+              ><Link className="ProductosBar" to="/Universal-Market_React/productos">Productos
+              </Link>
             </Button>
 
-               
             <Menu 
               anchorElm={anchorElm}
               open={open}
@@ -328,7 +301,6 @@ export default function NavBar(props: Props) {
                 horizontal: "right",
               }}
               className="MenuNavItem"
-              // sx={{ marginTop: 6.2, marginLeft: 84}}
             >
               <MenuItem
                 onClick={handleClose}
@@ -371,8 +343,6 @@ export default function NavBar(props: Props) {
                 color: "grey",
                 gap: 0,
                 fontFamily: "cursive",
-                // fontSize: 16,
-                // fontWeight:700,
                 "&:hover": { color: "lightblue" },
                 fontSize:{sm:11, md: 16 ,lg:16},
                 
@@ -392,7 +362,7 @@ export default function NavBar(props: Props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: "block", sm: "none" },

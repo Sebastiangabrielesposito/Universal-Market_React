@@ -8,23 +8,24 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 
+
 const Footer = () => {
     return(
         <div className="Footer" >
             <hr className='hrFooterInicio' />
-            <div class="container-footer">
-                <div class="box-footer">
-                    <div class="footer-logo">
+            <div className="container-footer">
+                <div className="box-footer">
+                    <div className="footer-logo">
                     <Link className="titleNav" to="/Universal-Market_React">
                         <FitnessCenterIcon style={{fontSize:18}}/>UNIVERSAL-MARKE<SportsGymnasticsIcon style={{fontSize:25}}/>
                     </Link>
                     </div>
-                    <div class="terminos">
+                    <div className="terminos">
                         <p><b>Aviso legal:</b>  “EL CONSUMO DE ESTE PRODUCTO ES RESPONSABILIDAD DE QUIEN LO RECOMIENDA Y DE QUIEN LO USA”.“ESTE PRODUCTO NO ES UN MEDICAMENTO”</p>
                     </div>
                 </div>
 
-                <div class="box-footer">
+                <div className="box-footer">
                     <h2>E-commerce</h2>
                     <Link to="/Universal-Market_React"><p style={{padding:2}}>Inicio</p></Link>
                     <Link to="/Universal-Market_React/productos"><p style={{padding:2}}>Productos</p></Link>
@@ -32,7 +33,7 @@ const Footer = () => {
                     <Link to="/Universal-Market_React"><p style={{padding:2}}>About you</p ></Link>
                 </div>
 
-                <div class="box-footer">	
+                <div className="box-footer">	
                     <h2>Redes sociales</h2>
                     
                     <div className='box-footer-icons'>        
@@ -59,7 +60,7 @@ const Footer = () => {
                 </div>
                 
             </div>        
-            <div class="box-copyright">
+            <div className="box-copyright">
                     <hr />
                     <p>Todos los derechos reservados © 2022 <Link className="titleNav" to="/Universal-Market_React">
                         <FitnessCenterIcon style={{fontSize:15}}/><b>UNIVERSAL-MARKE</b><SportsGymnasticsIcon style={{fontSize:20}}/>
@@ -69,4 +70,3 @@ const Footer = () => {
     );
 };
 export default Footer;
-

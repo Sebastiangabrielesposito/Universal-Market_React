@@ -4,7 +4,7 @@ import {useState} from 'react';
 import {Typography} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { Link } from 'react-router-dom';
+
 
 
 const ItemCount = ({Stock,onAdd}) => {
@@ -65,20 +65,18 @@ const ItemCount = ({Stock,onAdd}) => {
                 </Typography>
             </div>
             
-             {counter ?   <Link to="/Universal-Market_React/car"><Button onClick={() => onAdd(counter)} >Finalizar      Compra</Button></Link> :
                 
-                <div >
-                    <Typography align='center' sx={{marginTop:1}} >
-                        <Button  
-                        sx={{"&:hover": { color: "#8cbcd8" },height:25, fontSize:10.5, width:160, color:'grey', background:'#aabbd8', transition:"all 0.5s ease-in-out", fontFamily:'Trispace',marginBottom:0.2}}
-                        variant="outlinedWarning">                        
-                        Agregar al carrito</Button>
+            <div  >
+                <Typography align='center' sx={{marginTop:1}} >
+                    <Button  
+                    onClick={() => onAdd(counter) } 
+                    sx={{"&:hover": { color: "#8cbcd8" },height:25, fontSize:10.5, width:160, color:'grey', background:'#aabbd8', transition:"all 0.5s ease-in-out", fontFamily:'Trispace',marginBottom:0.2}}
+                    variant="outlinedWarning">                        
+                    Agregar al carrito</Button>
                 </Typography>             
-                
-                <p  className='ItemCount' > Stock :{Stock-counter}</p></div> 
-                
-                
-            }
+            
+                <p   className='ItemCount' > Stock :{Stock-counter}</p>
+            </div>             
         </div>
         )
 };

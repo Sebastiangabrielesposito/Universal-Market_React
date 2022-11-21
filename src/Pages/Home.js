@@ -9,26 +9,28 @@ import {useMyContext} from '../app/Context/CarContext';
 
 
 
+
 const Home = () => {
     
     const {id} = useParams()
-    
-    console.log("preciocondescuento", id);
+    // const v = useMyContext()
+    // console.log(useMyContext);
     
     const [products, setProducts] = useState([]);
-    const [state,setState] = useMyContext();   
+   
     
      useEffect(() => {
         HomeProducts(id).then(date => {
-            console.log(products);
+            // console.log(products);
             setProducts(date) 
         })
     }, [id])
-    const v = 500      
+    
     return (
         <div>
+            {/* {v} */}
             <DestacadosHome />
-            <ItemListHome productos= {products} />
+            <ItemListHome  productos= {products} />
            
             {/* {setState(v)} */}
             {/* <div><input type="text" onChange={(e) => setState({...state,nombre: e.target.value})} /></div>

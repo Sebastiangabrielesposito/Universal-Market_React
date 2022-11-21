@@ -7,10 +7,10 @@ export const ItemListHome = ({productos}) => {
     
     
     return(
-        <div className='FlexItemListHome'>
+        <div  className='FlexItemListHome'>
             {
             // <ItemHome itemProducts={productos} />
-            productos.map(prod => <ItemHome itemProducts={prod} />)
+            productos.map((prod,i) => <ItemHome key={i} itemProducts={prod} />)
 
             }  
         </div>

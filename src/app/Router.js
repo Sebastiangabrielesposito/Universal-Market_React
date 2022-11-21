@@ -6,7 +6,7 @@ import Contacto from "../Pages/Contac";
 // import {Proteinas} from '../Pages/Proteinas';
 // import {Creatinas} from '../Pages/Creatinas';
 // import {Ganadoresdepeso} from '../Pages/Ganadoresdepeso'
-import {Car} from '../Pages/Car'
+import {CarView} from '../Pages/CarView'
 import ItemDetailContainer from "../Pages/ItemDetailContainer";
 
 const Router = () => (
@@ -22,7 +22,7 @@ const Router = () => (
                 
                 
                 <Route path="/Universal-Market_React/contacto" element={<Contacto />} />
-                <Route path="/Universal-Market_React/car"  element={<Car />} />
+                <Route path="/Universal-Market_React/car"  element={<CarView />} />
 
             </Route>
         </Routes>

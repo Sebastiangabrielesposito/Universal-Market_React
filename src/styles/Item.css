@@ -93,12 +93,23 @@
     border-radius: 50px;
     /* border: 1.5px solid #1463ad; */
     /* text-decoration: none; */
-    color: rgb(71, 167, 199);
+    color: #0d5dc7;
     font-size: 14px;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.1s ease-in-out;
 
 
 }.LinkDetalle:hover{
-    color: #0d5dc7;
-    transition: all 0.6s ease-in-out;
+    color: rgb(104, 147, 202);
+    transition: all 0.1s ease-in-out;
+    text-decoration-line: underline;
+}
+.TerminarCompra{
+    text-decoration: none;
+    
+}
+.TerminarCompra:hover{
+    
+    font-weight: 500;
+    /* color:#768cca; */
+    /* text-decoration-line: underline; */
 }

@@ -15,8 +15,8 @@ const ItemDetailContainer = () => {
         getProducto(id).then(data => {
             SetProducto(data)
         })
-    },[])
-    const BuscarProd = producto.find (prod => prod.id == id)
+    },[id])
+    const BuscarProd = producto.find (prod => prod.id === id)
     
     return (
         <div>

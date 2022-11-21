@@ -1,7 +1,7 @@
 [
     {
         "id":"1",
-        "marca":"Star-Nutritíon",
+        "marca":"Star Nutrition",
         "precio":4680,
         "categoria":"proteinas",
         "stock":"12",
@@ -10,7 +10,7 @@
     },
     {
         "id":"2",
-        "marca":"Ultimate-Nutrition",
+        "marca":"Ultimate Nutrition",
         "precio": 58199,
         "$":"$",
         "preciocondescuento": 59399 ,
@@ -41,7 +41,7 @@
     },
     {
         "id":"5",
-        "marca":"Muscle-Tech",
+        "marca":"Muscle Tech",
         "precio": 59999,
         "$":"$",
         "preciocondescuento": 68999,
@@ -52,7 +52,7 @@
     },
     {
         "id":"6",
-        "marca":"Star-Nutritíon",
+        "marca":"Star Nutrition",
         "precio": 4900,
         "categoria": "ganadoresdepeso",
         "stock":"20",
@@ -92,7 +92,7 @@
     },
     {
         "id":"10",
-        "marca":"Ultimate-Nutrition",
+        "marca":"Ultimate Nutrition",
         "precio": 15950,
         "categoria": "creatinas",
         "stock":"12",
@@ -110,7 +110,7 @@
     },
     {
         "id":"12",
-        "marca":"Star-Nutrition",
+        "marca":"Star Nutrition",
         "precio": 10999,
         "$":"$",
         "preciocondescuento": 13499,
