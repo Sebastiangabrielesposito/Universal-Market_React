@@ -2,20 +2,20 @@ import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, 
 import { db } from './firebase';
 
 // CREATE
-export const createItem = async(obj) => {
-    const colRef = collection(db, 'productos');
+export const createPedido = async(obj) => {
+    const colRef = collection(db, 'pedidos');
     const data = await addDoc(colRef, obj);
     return data.id;
 }
 
 // UPDATE
-export const updateItem = async (id, obj) => {
+export const updateProductos = async (id, obj) => {
     const colRef = collection(db, 'productos');
     await updateDoc(doc(colRef, id), obj)
 }
 
 // READ
-export const getItems= async ()  => {
+export const getProductos= async ()  => {
     const colRef = collection(db, 'productos');
     const result = await getDocs(query(colRef));
     return getArrayFromCollection(result);
@@ -23,21 +23,23 @@ export const getItems= async ()  => {
 
 // READ WITH WHERE
 // Tener en cuenta que el tipo de dato de la condición debe coincidir con el tipo de dato que hay en Firebase o no obtendré un dato de respuesta
-export const getItemsByCondition = async (value) => {
+export const getProductosByCondition = async (value) => {
     const colRef = collection(db, 'productos');
-    const result = await getDocs(query(colRef, where('age', '==', value)));
+    let result;
+    if (value) result = await getDocs(query(colRef, where('categoria', '==', value)));
+    else result = await getDocs(query(colRef));
     return getArrayFromCollection(result);
     
 }
 
-export const getItemById = async (id) => {
+export const getProductosById = async (id) => {
     const colRef = collection(db, 'productos');
     const result = await getDoc(doc(colRef, id));
     return result.data();
 }
 
 // DELETE
-export const deleteItem = async (id) => {
+export const deleteProducto = async (id) => {
     const colRef = collection(db, 'productos');
     await deleteDoc(doc(colRef, id));
 }

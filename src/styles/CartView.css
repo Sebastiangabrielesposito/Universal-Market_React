@@ -1,4 +1,46 @@
 .DivMetronome{
    text-align: center;
+   align-items: center;
+   align-content: center;
+   display: flex;
+   justify-content: center;
+}
+.Volver-carrito{
+   display: flex;
+   /* text-align: center; */
+   justify-content: space-around;
+   margin: 100px 0px;
+   gap: 350px;
+   cursor: pointer;
    
+}
+.VolverProducto{
+   text-decoration: none;
+   
+}
+
+
+.Volver-carrito-detail{
+   text-align: center;
+   cursor: pointer;
+   background-color: #000;
+   animation-name: animatedButton;
+   animation-iteration-count: infinite;
+   animation-duration: 2s;
+   animation-delay: 1s;
+}
+
+.volverDetailButton{
+   animation-name: animatedButton;
+   animation-iteration-count: infinite;
+   animation-duration: 2s;
+   animation-delay: 1s;
+}
+
+
+@keyframes animatedButton{
+   0%{border-color: rgb(8, 25, 82);}
+   50%{color: #326499;}
+   75%{border-color: rgb(50, 60, 197);} 
+   100%{color: rgb(15, 36, 95);}
 }

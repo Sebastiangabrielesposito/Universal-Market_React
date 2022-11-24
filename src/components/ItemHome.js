@@ -19,7 +19,7 @@ export const ItemHome = ({itemProducts}) => {
                         sx={{"&:hover": { color: "#8cbcd8",fontSize:10.5 },height:25, fontSize:10, width:180, color:'grey', background:'#aabbd8', transition:"all 0.5s ease-in-out", fontFamily:'Trispace',textDecoration:'none', marginBottom:0.2,marginTop:0.6}}
                         variant="outlinedWarning"> Detalle del producto
                         </Button></Link>  
-            </div>
+            </div>   
         </div>
     )
 

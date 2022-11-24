@@ -4,34 +4,41 @@ import "slick-carousel/slick/slick-theme.css";
 import {ItemListHome} from '../components/ItemListHome'
 import { useEffect, useState } from "react";
 import {HomeProducts} from '../Services/products';
-import { useParams } from "react-router-dom";
+import {useParams, Link} from 'react-router-dom';
 import {useMyContext} from '../app/Context/CarContext';
+import {getProductosByCondition} from '../app/api';
+import {Button} from '@mui/material';
+import {LoadrerRing} from '../components/Loader';
 
 
 
 
 const Home = () => {
     
-    const {id} = useParams()
-    // const v = useMyContext()
-    // console.log(useMyContext);
-    
+    const {id} = useParams()  
     const [products, setProducts] = useState([]);
-   
+    const [Preload,setPreload] = useState(true);
     
-     useEffect(() => {
-        HomeProducts(id).then(date => {
+    setTimeout(() => {
+        setPreload(false)
+    }, 2000);
+    
+    
+    useEffect(() => {
+        getProductosByCondition(id).then(date => {
             // console.log(products);
-            setProducts(date) 
+            setProducts(date.filter(prod => prod.$ === "$")) 
         })
     }, [id])
     
     return (
-        <div>
-            {/* {v} */}
+        <div style={{background:"#000"}}>
+            
             <DestacadosHome />
-            <ItemListHome  productos= {products} />
-           
+            {Preload ? <LoadrerRing /> : <ItemListHome  productos= {products} />}
+            <div style={{textAlign:'center'}}>
+                <Link className='VolverProducto' to={"/Universal-Market_React/productos"}><Button className='Volver-carrito-detail' sx={{fontSize:12,fontFamily:'cursive',color:'#326499' , marginTop:6, textAlign:'center'}} variant="outlined">Ver todos los productos</Button></Link>
+            </div>  
             {/* {setState(v)} */}
             {/* <div><input type="text" onChange={(e) => setState({...state,nombre: e.target.value})} /></div>
             <div><input type="text" onChange={(e) => setState({...state, edad: e.target.value})} /></div> */}

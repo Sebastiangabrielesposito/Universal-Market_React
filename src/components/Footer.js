@@ -30,7 +30,7 @@ const Footer = () => {
                     <Link to="/Universal-Market_React"><p style={{padding:2}}>Inicio</p></Link>
                     <Link to="/Universal-Market_React/productos"><p style={{padding:2}}>Productos</p></Link>
                     <Link to="/Universal-Market_React/contacto"><p style={{padding:2}}>Contacto</p></Link>
-                    <Link to="/Universal-Market_React"><p style={{padding:2}}>About you</p ></Link>
+                    <Link to="/Universal-Market_React/car"><p style={{padding:2}}>Carrito</p ></Link>
                 </div>
 
                 <div className="box-footer">	

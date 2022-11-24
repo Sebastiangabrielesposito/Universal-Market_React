@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Universal-Market E-commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pootecto alojado en Github Pages = [(https://sebastiangabrielesposito.github.io/Universal-Market_React/)]
 
-## Available Scripts
+## Proyecto E-commerce de suplementos deportivos
 
-In the project directory, you can run:
+## Home 
 
-### `npm start`
+En este proyecto puede encontrarse en su pagina de inicio (Home) [(http://localhost:3000/Universal-Market_React)]
+una sección de productos destacados con descuentos, donde se puede acceder al detalle de producto y su posterior compra en el carrito (car) [(http://localhost:3000/Universal-Market_React/car)],
+un boton en la parte inferior de la pagina que enlaza con la pagina donde estan todos los productos (ItemListContainer)
+[(http://localhost:3000/Universal-Market_React/productos)], debajo del enlace un gif con publicidad.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Productos
 
-### `npm test`
+En esta página se encuentran alojados todos los productos de la consgina (ItemListContainer) [(http://localhost:3000/Universal-Market_React/productos)], con su respectivo acceso a detalle del prodcuto (ItemDetail) para agregar al carrito 
+(car) [(http://localhost:3000/Universal-Market_React/car)], y efectuar la compra,
+en la parte inferior de la página, se encuentran dos botones que enlazan a (Home) [(http://localhost:3000/Universal-Market_React)] y (car) [(http://localhost:3000/Universal-Market_React/car)],
+debajo un gif con publicidad
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contacto
 
-### `npm run build`
+En esta página puede encontrarse todo lo relacionado con el contacto del cliente con Universal-Market, un gif con publicidad, mail y direccion de contacto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## car
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+en (car) [(http://localhost:3000/Universal-Market_React/)] si no a seleccionado ningun Item, le mostrara que su carrito esta vácio con un gif animado, un boton para volver a productos y un leyenda de que su carrito esta en $0,
+al ingresar a (car) con un item sellecionado, cambia la leyenda a "Carrito" aparecera el item seleccionado con un boton para eliminar cada item y uno general de borrar todo, mas abajo solo si hay item aparecera el boton de finalizar compra, en todo el proceso desde la sellecion de cantidad de producto el sitio le ira informando de lo que haga con alertas hasta finalizar la compra o tambíen al elimnar uno o todos los productos del carrito.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Footer
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+En el footer se encuentra logo de la marca animado, enlaces a todas las pages del sitio y una columna con las redes sociales.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ItemDetail
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Al acceder a detalle en cualquier producto ya sea en (Home) [(http://localhost:3000/Universal-Market_React)] , o (productos) [(http://localhost:3000/Universal-Market_React/productos)],  ingresa a la page (ItemDetail) donde puede encontrar el producto seleccionado , el detalle del mismo, el stock y un enlace que lo dirigue a (car) [(http://localhost:3000/Universal-Market_React/car)] para finalizar la compra, debajo gif con publicidad.

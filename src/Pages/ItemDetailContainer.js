@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ItemDetail from "../components/ItemDetail";
 import {getProducto} from '../Services/products'
 import {useParams} from 'react-router-dom';
+import {getProductosById} from '../app/api';
 
 
 
@@ -12,15 +13,16 @@ const ItemDetailContainer = () => {
     const [producto, SetProducto] = useState([])
     
     useEffect(() => {
-        getProducto(id).then(data => {
+        getProductosById(id).then(data => {
             SetProducto(data)
+            
         })
     },[id])
-    const BuscarProd = producto.find (prod => prod.id === id)
     
+    // const BuscarProd = producto.find (prod => prod.id === id)
     return (
         <div>
-            {BuscarProd && <ItemDetail DetailItem = {BuscarProd} />}
+            { <ItemDetail DetailItem = {producto} />}
         </div>
     );
 };
