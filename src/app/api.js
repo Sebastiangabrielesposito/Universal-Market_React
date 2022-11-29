@@ -1,4 +1,4 @@
-import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, setDoc, where } from "firebase/firestore";
+import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, setDoc, where, orderBy } from "firebase/firestore";
 import { db } from './firebase';
 
 // CREATE
@@ -26,11 +26,14 @@ export const getProductos= async ()  => {
 export const getProductosByCondition = async (value) => {
     const colRef = collection(db, 'productos');
     let result;
-    if (value) result = await getDocs(query(colRef, where('categoria', '==', value)));
-    else result = await getDocs(query(colRef));
+    if (value) {
+        result = await getDocs(query(colRef, where('categoria', '==', value)));     
+    }
+    else result = await getDocs(query(colRef, orderBy('id', 'asc')));
     return getArrayFromCollection(result);
-    
+        
 }
+
 
 export const getProductosById = async (id) => {
     const colRef = collection(db, 'productos');

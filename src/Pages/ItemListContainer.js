@@ -15,7 +15,7 @@ const ItemListContainer = () => {
     useEffect(() => {
         getProductosByCondition(idCategoria).then(data => {
             // console.log('data',data)
-            setDatos(data);
+            setDatos(data)
         })
     },[idCategoria]);
    

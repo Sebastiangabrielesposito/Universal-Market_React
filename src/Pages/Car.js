@@ -1,17 +1,15 @@
-import{CarContext} from '../app/Context/CarContext'
+// import{CarContext} from '../app/Context/CarContext'
 import { useMyContext } from '../app/Context/CarContext';
 import {Link} from 'react-router-dom';
 import { Button } from '@mui/material';
-import { fontSize, textAlign } from '@mui/system';
-import { Metronome } from '@uiball/loaders'
 import {LoaderCar} from '../components/Loader';
 import '../styles/CartView.css'
 import Swal from 'sweetalert2'
+import {Formulario} from '../components/Formulario';
 
-
-export const CarView = () => {
-    const {car,removeItem,clear,priceInCar,itemsInCar,TerminarCompra } = useMyContext()
-    console.log(priceInCar);
+export const Car = () => {
+    const {car,removeItem,clear,priceInCar,TerminarCompra } = useMyContext()
+    // console.log(priceInCar);
    
     const AlertRemove = (cantidadDescripcion) => {
         const Toast = Swal.mixin({
@@ -20,6 +18,7 @@ export const CarView = () => {
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
+            width:400,
             // background:'linear-gradient(#6B11B4,#326499)',
             background:'#151515',
             color:'lightblue',
@@ -36,18 +35,7 @@ export const CarView = () => {
     };
     
     
-    
-    const AlertCompra = () => {
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Gracias por tu compra 👍',
-            showConfirmButton: false,
-            timer: 1500,
-            background:'#080808',
-            color:'#326499'
-          })
-    }
+   
    
 
 
@@ -65,11 +53,10 @@ export const CarView = () => {
                         <p  className='item'>{item.descripcion}</p>
                         <p  className='item'>{item.marca}</p>
                         <div className='precios'>
-                            {/* <p>Antes</p> */}
                             <p key={"4"}className='item-PrecioConDescuento'> {item.$}{item.preciocondescuento}</p>
+                            {item.preciocondescuento ?    <p className='item-Precio'> ${item.precio}</p> : <p className='item-Precio'> ${item.precio} </p>}
                         </div>
-                        {item.preciocondescuento ?    <p className='item-Precio'> Sale ${item.precio}</p> : <p className='item-Precio'> ${item.precio} </p>}
-                        <p className='item'>Cantidad:{item.count}</p>
+                        <p className='itemCant'>Cantidad:{item.count}</p>
                         <Button variant="outlined" color="error" style={{background:'black' ,fontSize:11,marginTop:12}} onClick={ () => { 
                             AlertRemove(`${item.count}u de ${item.marca} ${item.descripcion}`) 
                             removeItem(item.id)}}>Eliminar</Button>
@@ -88,15 +75,10 @@ export const CarView = () => {
             </div> : 
             
             <div style={{textAlign:'center',heigth:10,fontSize:20,background:'black'}}>
-            <Button variant="outlined" color="error" style={{background:'black' ,fontSize:11}} onClick={ () =>clear()}>Eliminar todo</Button></div>}      
+            <Button variant="outlined" color="error" style={{background:'black' ,fontSize:13,width:170}} onClick={ () =>clear()}>Eliminar todo</Button></div>}      
             
 
-            {car.length >  0 && <div>
-                <Button variant="outlined" sx={{"&:hover": { color: "#8cbcd8",fontSize:13 },height:27, fontSize:12.5, width:180, color:'grey', background:'#aabbd8', transition:"all 0.5s ease-in-out", fontFamily:'Trispace',textDecoration:'none', marginBottom:0.2,marginTop:5.6}} onClick={ () => {
-                    TerminarCompra()
-                    AlertCompra()
-                }}  > Terminar compra</Button>
-                </div>}
+            {car.length >  0 && <Formulario addOrder={ data => TerminarCompra(data)} /> }
                 
             
             <div className='Volver-carrito' >

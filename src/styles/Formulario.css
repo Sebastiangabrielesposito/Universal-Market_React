@@ -1,0 +1,76 @@
+.FormTerminarCompra{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    /* margin: 0 400px; */
+    text-align: center;
+}
+.inputs{
+    background-color: #000;
+    color:#fff;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: 7px;
+    height: 21px;
+    border-radius: 5px;
+    font-family: cursive;
+}
+.h3Form{
+    margin-top: 40px;
+    color: #326499;
+    margin-bottom: 25px;
+    animation-name: animatedh3;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    font-size: 23px;
+}
+@keyframes animatedh3{
+    0%{color: #326499;}
+    50%{color: #326499;}
+    75%{color:rgb(15, 36, 95) ;} 
+    100%{color: rgb(15, 36, 95);}
+}
+.DivForm{
+    margin-top: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.TerimnarCompra{
+    animation-name: animatedTerminarC;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+@keyframes animatedTerminarC{
+    0%{color: #326499;}
+    25%{font-size: 12.5px;}
+    50%{border-color: #146bc7;}
+    75%{font-size: 13px ;}
+    100%{color:rgb(60, 96, 196) ;} 
+}
+.BoxDiv{
+    border: 5px solid grey;
+    padding: 5px;
+    height: 300px;
+    text-align: center;
+    width: 300px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 50px;
+    animation-name: animatedBorder;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    background-color: #090909;
+}
+ 
+@keyframes animatedBorder{
+    0%{color:rgb(61, 61, 61) ;} 
+    50%{border-color: #15181b;}
+    75%{border-color: #12345a;}
+    100%{border-color:rgb(43, 76, 126)}
+} 

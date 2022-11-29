@@ -1,12 +1,11 @@
-import {useState, useContext} from 'react';
+import {useState} from 'react';
 import ItemCount from '../components/ItemCount'
 import {Link} from 'react-router-dom';
 import { useMyContext } from '../app/Context/CarContext';
-import CarContext from '../app/Context/CarContext';
 import {Loader} from './Loader';
 import { Button } from '@mui/material';
 import Swal from 'sweetalert2'
-import {fontSize} from '@mui/system';
+
 
 
 const ItemDetail = ({DetailItem}) => {
@@ -71,7 +70,9 @@ const ItemDetail = ({DetailItem}) => {
                         variant="outlinedWarning"> 
                         Ir al carrito</Button></Link> 
                         :  <ItemCount Stock={DetailItem.stock} onAdd={(count) =>{
-                            Toast1(count)
+                            if(count >= 1){
+                                Toast1(count)
+                            } 
                             addToCar(DetailItem,count);
                             setSelectedQuantity(count)  
                         }  

@@ -1,4 +1,3 @@
-import { BabyChangingStation } from '@mui/icons-material';
 import {createContext, useContext, useState} from 'react';
 import Swal from 'sweetalert2'
 import {createPedido} from '../api';
@@ -13,7 +12,6 @@ const CarContext = ({children}) => {
     // console.log(car);
     
     const addToCar = (DetailItem,count) => {
-        // console.log(DetailItem,count);
         // let newCar = car.map(item => item);
         // newCar.push(DetailItem, count)
         let itemAlreadyInCar = car.findIndex(itemInCar => itemInCar.id === DetailItem.id)
@@ -54,6 +52,7 @@ const CarContext = ({children}) => {
             timerProgressBar: true,
             // background:'linear-gradient(#6B11B4,#326499)',
             background:'#151515',
+            width: 550,
             color:'lightblue',
             didOpen: (toast) => {
               toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -81,19 +80,59 @@ const CarContext = ({children}) => {
         return total;
     }
 
-    const TerminarCompra = () => {
-        // car.map ((producto) => {
-            // const productos = car //{};
-            const cliente = {nombre: "Ali Baba", telefono:"1122113311", email:"Alibaba@aladino.com"}
-            // const pedido = {pedido: car.map((producto) => 
-            //     nombre: producto.marca, descripcion: producto.descripcion, precio: producto.precio * producto.cantidad, cantidad: producto.cantidad),cliente}
-            const pedido = {pedido: car,cliente}
 
-            createPedido((pedido));
-        
-        //alerta
-        setCar([])
+     
+    const AlertCompra = () => {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Gracias por tu compra 👍',
+            showConfirmButton: false,
+            timer: 2500,
+            background:'#080808',
+            color:'#326499'
+          })
     }
+
+    const RellenarCampos = () => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'center',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+            background:'#151515',
+            color:'lightblue',
+            width: 530,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'error',
+            title: `Debes rellenar correctamente los campos`
+          })
+    }
+
+    const TerminarCompra = (data) => {
+            const pedidoFinal = car.map((producto) => ({nombre: producto.marca, descripcion: producto.descripcion, precio: producto.precio * producto.count , cantidad: producto.count}));
+            let cliente = data;
+            let hoy = new Date();
+            let fecha = hoy.toLocaleString();
+            console.log(pedidoFinal);
+            if(cliente.nombre === "" || cliente.email === "" || cliente.telefono === ""){
+                RellenarCampos()
+            }
+            else {
+                const idPedido =  createPedido({pedidoFinal, cliente,  fecha});
+                AlertCompra()
+                setCar([])
+            }
+            
+    }
+   
 
     return( 
         <AppContext.Provider value = {{car,addToCar,clear,itemsInCar,removeItem,priceInCar,TerminarCompra}}>

@@ -12,13 +12,23 @@
    margin: 100px 0px;
    gap: 350px;
    cursor: pointer;
+   text-align: center;
    
+}@media (max-width : 950px){
+   .Volver-carrito{
+      gap:0px;
+   }
+}
+@media (max-width : 600px){
+   .Volver-carrito{
+      flex-direction: column;
+      gap: 35px;
+      margin-top: 50px;
+   }
 }
 .VolverProducto{
-   text-decoration: none;
-   
+   text-decoration: none; 
 }
-
 
 .Volver-carrito-detail{
    text-align: center;
