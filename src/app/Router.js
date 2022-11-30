@@ -3,9 +3,6 @@ import Home from '../Pages/Home';
 import Layout from "./Layout";
 import ItemListContainer from "../Pages/ItemListContainer";
 import Contacto from "../Pages/Contac";
-// import {Proteinas} from '../Pages/Proteinas';
-// import {Creatinas} from '../Pages/Creatinas';
-// import {Ganadoresdepeso} from '../Pages/Ganadoresdepeso'
 import {Car} from '../Pages/Car'
 import ItemDetailContainer from "../Pages/ItemDetailContainer";
 

@@ -4,7 +4,6 @@ import {Button} from '@mui/material';
 
 
 export const Item = ({item}) => {
-    
     // console.log(item)
     return(
         

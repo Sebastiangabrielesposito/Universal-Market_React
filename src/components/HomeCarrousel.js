@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import '../styles/HomeCarrousel.css'
-// import um from '../assets/img/universal.jpg'
+
 
 
 export default class SimpleSlider extends Component {
@@ -21,9 +21,6 @@ export default class SimpleSlider extends Component {
         <div className="HomeCarrousel" >
           {/* <h2> Single Item</h2> */}
           <Slider {...settings}>
-            {/* <div className="img1">
-              <img src='https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1667446229411-home-sliderdesktop.jpg' className="Imagen Carrousel"/>
-            </div> */}
             <div >
               <img className="imgHomeCarrousel" src="https://as2.ftcdn.net/v2/jpg/04/50/91/67/1000_F_450916782_ephwoRFhkUdv9sHuOegPgutiADRlz41o.jpg" alt="Imagen carrousel 2" />
               {/* <h3>2</h3> */}

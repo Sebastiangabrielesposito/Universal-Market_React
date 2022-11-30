@@ -82,13 +82,15 @@ const CarContext = ({children}) => {
 
 
      
-    const AlertCompra = () => {
+    const AlertCompra = (idPedido) => {
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Gracias por tu compra 👍',
+            title: `Su ID de pedido es: \n \n ${idPedido}
+            \n Gracias por su compra 👍`,
+            width:600,
             showConfirmButton: false,
-            timer: 2500,
+            timer: 4000,
             background:'#080808',
             color:'#326499'
           })
@@ -116,18 +118,21 @@ const CarContext = ({children}) => {
           })
     }
 
-    const TerminarCompra = (data) => {
+    const TerminarCompra = async(data, idPedido) => {
             const pedidoFinal = car.map((producto) => ({nombre: producto.marca, descripcion: producto.descripcion, precio: producto.precio * producto.count , cantidad: producto.count}));
             let cliente = data;
             let hoy = new Date();
             let fecha = hoy.toLocaleString();
-            console.log(pedidoFinal);
+            // console.log(pedidoFinal);
+            const total = car.map(producto => producto.precio * producto.count).reduce((prev, curr)=> prev + curr , 0) 
             if(cliente.nombre === "" || cliente.email === "" || cliente.telefono === ""){
                 RellenarCampos()
             }
             else {
-                const idPedido =  createPedido({pedidoFinal, cliente,  fecha});
-                AlertCompra()
+
+                const idPedido =  await createPedido({pedidoFinal, cliente,  fecha, total});
+                // console.log(idPedido);
+                AlertCompra(idPedido)
                 setCar([])
             }
             

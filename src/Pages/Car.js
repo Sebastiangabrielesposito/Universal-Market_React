@@ -30,7 +30,7 @@ export const Car = () => {
             
             Toast.fire({
             icon: 'success',
-            title: `Eliinaste ${cantidadDescripcion} del carrito`
+            title: `Eliminaste ${cantidadDescripcion} del carrito`
             })
     };
     
@@ -78,7 +78,8 @@ export const Car = () => {
             <Button variant="outlined" color="error" style={{background:'black' ,fontSize:13,width:170}} onClick={ () =>clear()}>Eliminar todo</Button></div>}      
             
 
-            {car.length >  0 && <Formulario addOrder={ data => TerminarCompra(data)} /> }
+            {car.length >  0 && <Formulario addOrder={ data => TerminarCompra(data)} 
+            idPedido={idPedido => console.log(idPedido)}/> }
                 
             
             <div className='Volver-carrito' >

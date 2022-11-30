@@ -4,7 +4,7 @@ import {Button} from '@mui/material';
 import '../styles/Formulario.css'
 
 
-export const Formulario = ({addOrder}) => {
+export const Formulario = ({addOrder, idPedido}) => {
     // const {TerminarCompra } = useMyContext()
     const [nombre,setNombre] = useState("");
     const [telefono,setTelefono] = useState();
