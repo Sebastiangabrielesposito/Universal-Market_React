@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Universal-Market_React/static/css/main.f8190930.css",
-    "main.js": "/Universal-Market_React/static/js/main.d112e1cf.js",
+    "main.js": "/Universal-Market_React/static/js/main.f2ef1079.js",
     "static/media/GanadorMassTech.webp": "/Universal-Market_React/static/media/GanadorMassTech.bfaa8d049ebf28d50e28.webp",
     "static/media/CreatinaUltimate.webp": "/Universal-Market_React/static/media/CreatinaUltimate.d2f49b9b80b240038967.webp",
     "static/media/AminoBsn.webp": "/Universal-Market_React/static/media/AminoBsn.0d135200af54c9e3da2d.webp",
@@ -14,10 +14,10 @@
     "static/media/slick.woff": "/Universal-Market_React/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Universal-Market_React/index.html",
     "main.f8190930.css.map": "/Universal-Market_React/static/css/main.f8190930.css.map",
-    "main.d112e1cf.js.map": "/Universal-Market_React/static/js/main.d112e1cf.js.map"
+    "main.f2ef1079.js.map": "/Universal-Market_React/static/js/main.f2ef1079.js.map"
   },
   "entrypoints": [
     "static/css/main.f8190930.css",
-    "static/js/main.d112e1cf.js"
+    "static/js/main.f2ef1079.js"
   ]
 }
