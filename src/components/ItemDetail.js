@@ -25,6 +25,7 @@ const ItemDetail = ({DetailItem}) => {
             // background:'linear-gradient(#6B11B4,#326499)',
             background:'#151515',
             color:'lightblue',
+            width: 500,
             didOpen: (toast) => {
               toast.addEventListener('mouseenter', Swal.stopTimer)
               toast.addEventListener('mouseleave', Swal.resumeTimer)
@@ -33,7 +34,7 @@ const ItemDetail = ({DetailItem}) => {
           
           Toast.fire({
             icon: 'success',
-            title: `Agregaste ${count}u al carrito`
+            title:`Agregaste ${count} unidad/es de ${DetailItem.descripcion} ${DetailItem.marca} al carrito`
           })
     }
     
