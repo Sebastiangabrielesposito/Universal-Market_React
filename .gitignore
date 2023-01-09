@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # .env Claves del proyecto en firebase
-.env
+/.env
