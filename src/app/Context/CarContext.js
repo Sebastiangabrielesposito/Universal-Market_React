@@ -79,7 +79,7 @@ const CarContext = ({children}) => {
         car.forEach(priceInCar => total = total + priceInCar.precio * priceInCar.count);
         return total;
     }
-
+    
 
      
     const AlertCompra = (idPedido) => {
