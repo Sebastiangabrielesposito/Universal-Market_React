@@ -1,7 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# .env Claves del proyecto en firebase
-.env
+# .env variables de entorno (claves) proyecto firebase
+#.env
+
+#
+variablesEntorno.txt
+variables
 
 # dependencies
 /node_modules
